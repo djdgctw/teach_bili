@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "sobel_edge",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/fyt\/teach_bili\/course_3\/build\/run_hls.tcl",
+          "sourceLine": "53",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "sobel_edge"
+              }]
+          }
+        }]
+    }]}

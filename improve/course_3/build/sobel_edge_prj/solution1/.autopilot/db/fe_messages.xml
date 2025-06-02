@@ -1,0 +1,51 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:692:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:706:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/fyt/teach_bili/course_3/build/run_hls.tcl:53:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="sobel_edge" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=sobel_edge" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../code/sobel_edge.cpp:4:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sobel_edge" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=input offset=slave bundle=gmem0 depth=4096" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../code/sobel_edge.cpp:5:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sobel_edge" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=output offset=slave bundle=gmem1 depth=4096" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../code/sobel_edge.cpp:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sobel_edge" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=input bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../code/sobel_edge.cpp:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sobel_edge" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=output bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../code/sobel_edge.cpp:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sobel_edge" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=rows bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../code/sobel_edge.cpp:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sobel_edge" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=cols bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../code/sobel_edge.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sobel_edge" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../code/sobel_edge.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sobel_edge" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../code/sobel_edge.cpp:22:30" msg_body="Loop 'VITIS_LOOP_22_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_22_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../code/sobel_edge.cpp:23:34" msg_body="Loop 'VITIS_LOOP_23_4' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_23_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../code/sobel_edge.cpp:3:0" msg_body="Unrolling loop 'VITIS_LOOP_22_3' (../code/sobel_edge.cpp:22:30) in function 'sobel_edge' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../code/sobel_edge.cpp:22:30" LoopName="VITIS_LOOP_22_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../code/sobel_edge.cpp:3:0" msg_body="Unrolling loop 'VITIS_LOOP_23_4' (../code/sobel_edge.cpp:23:34) in function 'sobel_edge' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../code/sobel_edge.cpp:23:34" LoopName="VITIS_LOOP_23_4"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

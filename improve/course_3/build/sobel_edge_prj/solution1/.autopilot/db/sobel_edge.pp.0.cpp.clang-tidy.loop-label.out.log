@@ -1,0 +1,55 @@
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:1324:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1211_1: 
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:1324:7: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:2298:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:2298:5: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:2312:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:2312:5: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:2326:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:2326:5: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:3937:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1245_1: 
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:3937:7: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:5733:5: warning: Added loop label VITIS_LOOP_16_1:   [xilinx-label-all-loops]
+    for (int i = 1; i < rows - 1; i++) {
+    ^~~
+    VITIS_LOOP_16_1: 
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:5733:5: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:5734:9: warning: Added loop label VITIS_LOOP_17_2:   [xilinx-label-all-loops]
+        for (int j = 1; j < cols - 1; j++) {
+        ^~~
+        VITIS_LOOP_17_2: 
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:5734:9: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:5739:13: warning: Added loop label VITIS_LOOP_22_3:   [xilinx-label-all-loops]
+            for (int ki = -1; ki <= 1; ki++) {
+            ^~~
+            VITIS_LOOP_22_3: 
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:5739:13: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:5740:17: warning: Added loop label VITIS_LOOP_23_4:   [xilinx-label-all-loops]
+                for (int kj = -1; kj <= 1; kj++) {
+                ^~~
+                VITIS_LOOP_23_4: 
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:5740:17: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:5754:5: warning: Added loop label VITIS_LOOP_37_5:   [xilinx-label-all-loops]
+    for (int i = 0; i < rows; i++) {
+    ^~~
+    VITIS_LOOP_37_5: 
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:5754:5: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:5758:5: warning: Added loop label VITIS_LOOP_41_6:   [xilinx-label-all-loops]
+    for (int j = 0; j < cols; j++) {
+    ^~~
+    VITIS_LOOP_41_6: 
+/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp:5758:5: note: FIX-IT applied suggested code changes

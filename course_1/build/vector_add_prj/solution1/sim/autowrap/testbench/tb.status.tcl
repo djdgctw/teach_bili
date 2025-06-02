@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/./sim/autowrap/testbench/vector_add.cpp_pre.cpp.tb.cpp

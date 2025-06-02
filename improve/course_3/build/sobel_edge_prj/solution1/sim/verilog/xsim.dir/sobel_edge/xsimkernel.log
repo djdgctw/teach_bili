@@ -1,0 +1,7 @@
+Running: xsim.dir/sobel_edge/xsimk -simmode gui -wdb sobel_edge.wdb -simrunnum 0 -socket 59903
+Design successfully loaded
+Design Loading Memory Usage: 22584 KB (Peak: 22592 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 109388 KB (Peak: 161852 KB)
+Simulation CPU Usage: 400 ms

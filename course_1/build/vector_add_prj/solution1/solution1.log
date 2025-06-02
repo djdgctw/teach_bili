@@ -1,0 +1,84 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -ldflags -L/home/fyt/.conda/envs/opencv_env/lib -Wl,-rpath,/home/fyt/.conda/envs/opencv_env/lib -lopencv_core -lopencv_imgproc -lopencv_imgcodecs 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.44 seconds. CPU system time: 0.23 seconds. Elapsed time: 1.65 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 873.934 MB.
+INFO: [HLS 200-10] Analyzing design file '../code/vector_add.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.04 seconds. CPU system time: 0.28 seconds. Elapsed time: 1.32 seconds; current allocated memory: 876.090 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_13_1'(../code/vector_add.cpp:13:19) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../code/vector_add.cpp:13:19)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'VITIS_LOOP_13_1'(../code/vector_add.cpp:13:19) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../code/vector_add.cpp:13:19)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.43 seconds. CPU system time: 0.23 seconds. Elapsed time: 1.65 seconds; current allocated memory: 876.660 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 876.660 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 878.188 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 880.438 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 904.090 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 905.094 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'vector_add' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'vector_add_Pipeline_VITIS_LOOP_13_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_13_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_13_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.03 seconds; current allocated memory: 906.113 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 906.113 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'vector_add' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 906.340 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 906.340 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'vector_add_Pipeline_VITIS_LOOP_13_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'vector_add_Pipeline_VITIS_LOOP_13_1' pipeline 'VITIS_LOOP_13_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem0_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem1_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem1_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem1_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem1_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem1_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem1_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem1_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem1_AWCACHE' to 0.

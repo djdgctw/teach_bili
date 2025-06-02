@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vitis HLS Report for 'vector_add_Pipeline_VITIS_LOOP_13_1'
+================================================================
+* Date:           Sun Jun  1 09:32:55 2025
+
+* Version:        2022.2.2 (Build 3779808 on Feb 17 2023)
+* Project:        vector_add_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_13_1  |        ?|        ?|         4|          1|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.11>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 7 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%size_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %size"   --->   Operation 8 'read' 'size_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%sext_ln13_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln13"   --->   Operation 9 'read' 'sext_ln13_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%sext_ln13_1_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln13_1"   --->   Operation 10 'read' 'sext_ln13_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%sext_ln13_cast = sext i62 %sext_ln13_read"   --->   Operation 11 'sext' 'sext_ln13_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%sext_ln13_1_cast = sext i62 %sext_ln13_1_read"   --->   Operation 12 'sext' 'sext_ln13_1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem1, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 256, void @empty_3, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 256, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.58ns)   --->   "%store_ln0 = store i31 0, i31 %i"   --->   Operation 15 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 16 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%i_load = load i31 %i" [../code/vector_add.cpp:13]   --->   Operation 17 'load' 'i_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%i_cast = zext i31 %i_load" [../code/vector_add.cpp:13]   --->   Operation 18 'zext' 'i_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (2.47ns)   --->   "%icmp_ln13 = icmp_slt  i32 %i_cast, i32 %size_read" [../code/vector_add.cpp:13]   --->   Operation 19 'icmp' 'icmp_ln13' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (2.52ns)   --->   "%add_ln13 = add i31 %i_load, i31 1" [../code/vector_add.cpp:13]   --->   Operation 20 'add' 'add_ln13' <Predicate = true> <Delay = 2.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln13 = br i1 %icmp_ln13, void %for.end.loopexit.exitStub, void %for.inc.split" [../code/vector_add.cpp:13]   --->   Operation 21 'br' 'br_ln13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (1.58ns)   --->   "%store_ln13 = store i31 %add_ln13, i31 %i" [../code/vector_add.cpp:13]   --->   Operation 22 'store' 'store_ln13' <Predicate = (icmp_ln13)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%gmem0_addr = getelementptr i32 %gmem0, i64 %sext_ln13_cast" [../code/vector_add.cpp:13]   --->   Operation 23 'getelementptr' 'gmem0_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (7.30ns)   --->   "%gmem0_addr_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem0_addr"   --->   Operation 24 'read' 'gmem0_addr_read' <Predicate = (icmp_ln13)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 2.55>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem1"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem0"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%gmem1_addr = getelementptr i32 %gmem1, i64 %sext_ln13_1_cast" [../code/vector_add.cpp:13]   --->   Operation 27 'getelementptr' 'gmem1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (2.55ns)   --->   "%add_ln186 = add i32 %gmem0_addr_read, i32 4294967295"   --->   Operation 28 'add' 'add_ln186' <Predicate = (icmp_ln13)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 33 'ret' 'ret_ln0' <Predicate = (!icmp_ln13)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%specpipeline_ln14 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [../code/vector_add.cpp:14]   --->   Operation 29 'specpipeline' 'specpipeline_ln14' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%specloopname_ln13 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [../code/vector_add.cpp:13]   --->   Operation 30 'specloopname' 'specloopname_ln13' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (7.30ns)   --->   "%write_ln15 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %gmem1_addr, i32 %add_ln186, i4 15" [../code/vector_add.cpp:15]   --->   Operation 31 'write' 'write_ln15' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%br_ln13 = br void %for.inc" [../code/vector_add.cpp:13]   --->   Operation 32 'br' 'br_ln13' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 4.11ns
+The critical path consists of the following:
+	'alloca' operation ('i') [6]  (0 ns)
+	'load' operation ('i_load', ../code/vector_add.cpp:13) on local variable 'i' [17]  (0 ns)
+	'add' operation ('add_ln13', ../code/vector_add.cpp:13) [24]  (2.52 ns)
+	'store' operation ('store_ln13', ../code/vector_add.cpp:13) of variable 'add_ln13', ../code/vector_add.cpp:13 on local variable 'i' [32]  (1.59 ns)
+
+ <State 2>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem0_addr', ../code/vector_add.cpp:13) [22]  (0 ns)
+	bus read operation ('gmem0_addr_read') on port 'gmem0' [29]  (7.3 ns)
+
+ <State 3>: 2.55ns
+The critical path consists of the following:
+	'add' operation ('add_ln186') [30]  (2.55 ns)
+
+ <State 4>: 7.3ns
+The critical path consists of the following:
+	bus write operation ('write_ln15', ../code/vector_add.cpp:15) on port 'gmem1' (../code/vector_add.cpp:15) [31]  (7.3 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

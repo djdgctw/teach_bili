@@ -1,0 +1,233 @@
+
+
+================================================================
+== Vitis HLS Report for 'sobel_edge_Pipeline_VITIS_LOOP_37_5'
+================================================================
+* Date:           Sun Jun  1 08:41:20 2025
+
+* Version:        2022.2.2 (Build 3779808 on Feb 17 2023)
+* Project:        sobel_edge_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_37_5  |        ?|        ?|         9|          2|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 10
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 10, States = { 1 2 3 4 5 6 7 8 9 10 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%phi_mul8 = alloca i32 1"   --->   Operation 12 'alloca' 'phi_mul8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 13 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%sext_ln39_read = read i33 @_ssdm_op_Read.ap_auto.i33, i33 %sext_ln39"   --->   Operation 14 'read' 'sext_ln39_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%output_r_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %output_r"   --->   Operation 15 'read' 'output_r_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%sext_ln16_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %sext_ln16"   --->   Operation 16 'read' 'sext_ln16_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%rows_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %rows"   --->   Operation 17 'read' 'rows_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%sext_ln39_cast = sext i33 %sext_ln39_read"   --->   Operation 18 'sext' 'sext_ln39_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%sext_ln16_cast = sext i32 %sext_ln16_read"   --->   Operation 19 'sext' 'sext_ln16_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem1, void @empty_2, i32 0, i32 0, void @empty_3, i32 0, i32 4096, void @empty_9, void @empty_5, void @empty_3, i32 16, i32 16, i32 16, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (1.58ns)   --->   "%store_ln0 = store i31 0, i31 %i"   --->   Operation 21 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 22 [1/1] (1.58ns)   --->   "%store_ln0 = store i63 0, i63 %phi_mul8"   --->   Operation 22 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc77"   --->   Operation 23 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.04>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%i_1 = load i31 %i" [../code/sobel_edge.cpp:37]   --->   Operation 24 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %gmem1"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%i_1_cast = zext i31 %i_1" [../code/sobel_edge.cpp:37]   --->   Operation 26 'zext' 'i_1_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 27 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (2.47ns)   --->   "%icmp_ln37 = icmp_slt  i32 %i_1_cast, i32 %rows_read" [../code/sobel_edge.cpp:37]   --->   Operation 28 'icmp' 'icmp_ln37' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (2.52ns)   --->   "%add_ln37 = add i31 %i_1, i31 1" [../code/sobel_edge.cpp:37]   --->   Operation 29 'add' 'add_ln37' <Predicate = true> <Delay = 2.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln37 = br i1 %icmp_ln37, void %VITIS_LOOP_41_6.loopexit.exitStub, void %for.inc77.split" [../code/sobel_edge.cpp:37]   --->   Operation 30 'br' 'br_ln37' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%phi_mul8_load = load i63 %phi_mul8" [../code/sobel_edge.cpp:38]   --->   Operation 31 'load' 'phi_mul8_load' <Predicate = (icmp_ln37)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (3.49ns)   --->   "%add_ln38_1 = add i63 %phi_mul8_load, i63 %sext_ln16_cast" [../code/sobel_edge.cpp:38]   --->   Operation 32 'add' 'add_ln38_1' <Predicate = (icmp_ln37)> <Delay = 3.49> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.49> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%sext_ln38 = sext i63 %phi_mul8_load" [../code/sobel_edge.cpp:38]   --->   Operation 33 'sext' 'sext_ln38' <Predicate = (icmp_ln37)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (3.52ns)   --->   "%add_ln38 = add i64 %sext_ln38, i64 %output_r_read" [../code/sobel_edge.cpp:38]   --->   Operation 34 'add' 'add_ln38' <Predicate = (icmp_ln37)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%gmem1_addr_1 = getelementptr i8 %gmem1, i64 %add_ln38" [../code/sobel_edge.cpp:38]   --->   Operation 35 'getelementptr' 'gmem1_addr_1' <Predicate = (icmp_ln37)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (3.52ns)   --->   "%add_ln39 = add i64 %sext_ln39_cast, i64 %add_ln38" [../code/sobel_edge.cpp:39]   --->   Operation 36 'add' 'add_ln39' <Predicate = (icmp_ln37)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%gmem1_addr = getelementptr i8 %gmem1, i64 %add_ln39" [../code/sobel_edge.cpp:39]   --->   Operation 37 'getelementptr' 'gmem1_addr' <Predicate = (icmp_ln37)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (1.58ns)   --->   "%store_ln37 = store i31 %add_ln37, i31 %i" [../code/sobel_edge.cpp:37]   --->   Operation 38 'store' 'store_ln37' <Predicate = (icmp_ln37)> <Delay = 1.58>
+ST_2 : Operation 39 [1/1] (1.58ns)   --->   "%store_ln37 = store i63 %add_ln38_1, i63 %phi_mul8" [../code/sobel_edge.cpp:37]   --->   Operation 39 'store' 'store_ln37' <Predicate = (icmp_ln37)> <Delay = 1.58>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 40 [1/1] (7.30ns)   --->   "%gmem1_addr_1_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i8P1A, i8 %gmem1_addr_1, i32 1" [../code/sobel_edge.cpp:38]   --->   Operation 40 'writereq' 'gmem1_addr_1_req' <Predicate = (icmp_ln37)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 41 [1/1] (7.30ns)   --->   "%write_ln38 = write void @_ssdm_op_Write.m_axi.i8P1A, i8 %gmem1_addr_1, i8 0, i1 1" [../code/sobel_edge.cpp:38]   --->   Operation 41 'write' 'write_ln38' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 42 [1/1] (7.30ns)   --->   "%gmem1_addr_2_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i8P1A, i8 %gmem1_addr, i32 1" [../code/sobel_edge.cpp:39]   --->   Operation 42 'writereq' 'gmem1_addr_2_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 43 [5/5] (7.30ns)   --->   "%gmem1_addr_1_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %gmem1_addr_1" [../code/sobel_edge.cpp:38]   --->   Operation 43 'writeresp' 'gmem1_addr_1_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 44 [1/1] (7.30ns)   --->   "%write_ln39 = write void @_ssdm_op_Write.m_axi.i8P1A, i8 %gmem1_addr, i8 0, i1 1" [../code/sobel_edge.cpp:39]   --->   Operation 44 'write' 'write_ln39' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 45 [4/5] (7.30ns)   --->   "%gmem1_addr_1_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %gmem1_addr_1" [../code/sobel_edge.cpp:38]   --->   Operation 45 'writeresp' 'gmem1_addr_1_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 46 [5/5] (7.30ns)   --->   "%gmem1_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %gmem1_addr" [../code/sobel_edge.cpp:39]   --->   Operation 46 'writeresp' 'gmem1_addr_2_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 47 [3/5] (7.30ns)   --->   "%gmem1_addr_1_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %gmem1_addr_1" [../code/sobel_edge.cpp:38]   --->   Operation 47 'writeresp' 'gmem1_addr_1_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 48 [4/5] (7.30ns)   --->   "%gmem1_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %gmem1_addr" [../code/sobel_edge.cpp:39]   --->   Operation 48 'writeresp' 'gmem1_addr_2_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 49 [2/5] (7.30ns)   --->   "%gmem1_addr_1_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %gmem1_addr_1" [../code/sobel_edge.cpp:38]   --->   Operation 49 'writeresp' 'gmem1_addr_1_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 50 [3/5] (7.30ns)   --->   "%gmem1_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %gmem1_addr" [../code/sobel_edge.cpp:39]   --->   Operation 50 'writeresp' 'gmem1_addr_2_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 56 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 56 'ret' 'ret_ln0' <Predicate = (!icmp_ln37)> <Delay = 0.00>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 51 [1/5] (7.30ns)   --->   "%gmem1_addr_1_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %gmem1_addr_1" [../code/sobel_edge.cpp:38]   --->   Operation 51 'writeresp' 'gmem1_addr_1_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 52 [2/5] (7.30ns)   --->   "%gmem1_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %gmem1_addr" [../code/sobel_edge.cpp:39]   --->   Operation 52 'writeresp' 'gmem1_addr_2_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 7.30>
+ST_10 : Operation 53 [1/1] (0.00ns)   --->   "%specloopname_ln37 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [../code/sobel_edge.cpp:37]   --->   Operation 53 'specloopname' 'specloopname_ln37' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 54 [1/5] (7.30ns)   --->   "%gmem1_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %gmem1_addr" [../code/sobel_edge.cpp:39]   --->   Operation 54 'writeresp' 'gmem1_addr_2_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln37 = br void %for.inc77" [../code/sobel_edge.cpp:37]   --->   Operation 55 'br' 'br_ln37' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	'alloca' operation ('i') [7]  (0 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'i' [15]  (1.59 ns)
+
+ <State 2>: 7.04ns
+The critical path consists of the following:
+	'load' operation ('phi_mul8_load', ../code/sobel_edge.cpp:38) on local variable 'phi_mul8' [27]  (0 ns)
+	'add' operation ('add_ln38', ../code/sobel_edge.cpp:38) [31]  (3.52 ns)
+	'add' operation ('add_ln39', ../code/sobel_edge.cpp:39) [36]  (3.52 ns)
+
+ <State 3>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('gmem1_addr_1_req', ../code/sobel_edge.cpp:38) on port 'gmem1' (../code/sobel_edge.cpp:38) [33]  (7.3 ns)
+
+ <State 4>: 7.3ns
+The critical path consists of the following:
+	bus write operation ('write_ln38', ../code/sobel_edge.cpp:38) on port 'gmem1' (../code/sobel_edge.cpp:38) [34]  (7.3 ns)
+
+ <State 5>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('gmem1_addr_1_resp', ../code/sobel_edge.cpp:38) on port 'gmem1' (../code/sobel_edge.cpp:38) [35]  (7.3 ns)
+
+ <State 6>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('gmem1_addr_1_resp', ../code/sobel_edge.cpp:38) on port 'gmem1' (../code/sobel_edge.cpp:38) [35]  (7.3 ns)
+
+ <State 7>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('gmem1_addr_1_resp', ../code/sobel_edge.cpp:38) on port 'gmem1' (../code/sobel_edge.cpp:38) [35]  (7.3 ns)
+
+ <State 8>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('gmem1_addr_1_resp', ../code/sobel_edge.cpp:38) on port 'gmem1' (../code/sobel_edge.cpp:38) [35]  (7.3 ns)
+
+ <State 9>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('gmem1_addr_1_resp', ../code/sobel_edge.cpp:38) on port 'gmem1' (../code/sobel_edge.cpp:38) [35]  (7.3 ns)
+
+ <State 10>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('gmem1_addr_2_resp', ../code/sobel_edge.cpp:39) on port 'gmem1' (../code/sobel_edge.cpp:39) [40]  (7.3 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

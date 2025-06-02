@@ -1,0 +1,30 @@
+/home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp:1324:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1211_1: 
+/home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp:1324:7: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp:2298:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp:2298:5: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp:2312:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp:2312:5: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp:2326:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp:2326:5: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp:3937:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1245_1: 
+/home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp:3937:7: note: FIX-IT applied suggested code changes
+/home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp:5732:2: warning: Added loop label VITIS_LOOP_13_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < size; i++) {
+ ^~~
+ VITIS_LOOP_13_1: 
+/home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp:5732:2: note: FIX-IT applied suggested code changes

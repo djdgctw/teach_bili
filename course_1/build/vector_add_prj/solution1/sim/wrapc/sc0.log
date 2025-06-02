@@ -1,0 +1,6 @@
+   Build using "/opt/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling apatb_vector_add.cpp
+   Compiling main.cpp_pre.cpp.tb.cpp
+   Compiling vector_add.cpp_pre.cpp.tb.cpp
+   Compiling apatb_vector_add_ir.ll
+   Generating cosim.tv.exe

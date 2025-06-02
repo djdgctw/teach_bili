@@ -1,0 +1,440 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2.2 (64-bit)
+  **** SW Build 3779808 on Feb 17 2023
+  **** IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+    ** Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'fyt' on host 'fpgaserver-9950x' (Linux_x86_64 version 5.15.0-130-generic) on Sun Jun 01 08:41:04 UTC 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/fyt/teach_bili/course_3/build'
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: source run_hls.tcl
+Sobel Edge Detection HLS Project - Start time: Sun Jun 01 08:41:04 UTC 2025
+INFO: [HLS 200-1510] Running: open_project sobel_edge_prj 
+INFO: [HLS 200-10] Creating and opening project '/home/fyt/teach_bili/course_3/build/sobel_edge_prj'.
+INFO: [HLS 200-1510] Running: set_top sobel_edge 
+INFO: [HLS 200-1510] Running: add_files ../code/sobel_edge.cpp 
+INFO: [HLS 200-10] Adding design file '../code/sobel_edge.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files ../code/sobel_edge.h 
+INFO: [HLS 200-10] Adding design file '../code/sobel_edge.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../code/main.cpp -cflags -I/home/fyt/.conda/envs/opencv_env/include/opencv4 -std=c++14 -csimflags -L/home/fyt/.conda/envs/opencv_env/lib -Wl,-rpath,/home/fyt/.conda/envs/opencv_env/lib -lopencv_core -lopencv_imgproc -lopencv_imgcodecs 
+INFO: [HLS 200-10] Adding test bench file '../code/main.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 
+INFO: [HLS 200-10] Creating and opening solution '/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -ldflags -L/home/fyt/.conda/envs/opencv_env/lib -Wl,-rpath,/home/fyt/.conda/envs/opencv_env/lib -lopencv_core -lopencv_imgproc -lopencv_imgcodecs 
+/bin/bash: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/bash)
+/bin/bash: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/bash)
+/bin/bash: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/bash)
+Running Dispatch Server on port: 46037
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../code/main.cpp in debug mode
+   Compiling ../../../../../code/sobel_edge.cpp in debug mode
+   Generating csim.exe
+/bin/sh: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/sh)
+/bin/sh: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/sh)
+/bin/bash: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/bash)
+/bin/sh: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/sh)
+/bin/sh: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/sh)
+/bin/sh: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/sh)
+/bin/sh: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/sh)
+/bin/sh: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/sh)
+/bin/sh: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/sh)
+/bin/sh: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/sh)
+/bin/sh: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/sh)
+Loaded grayscale image: 48x48 = 2304 pixels
+Output will be saved as: /home/fyt/teach_bili/course_3/images/sobel_edge_output_084116_882.png
+First 10 edge values:
+Input[0]=255 -> Edge[0]=0
+Input[1]=255 -> Edge[1]=0
+Input[2]=255 -> Edge[2]=0
+Input[3]=255 -> Edge[3]=0
+Input[4]=255 -> Edge[4]=0
+Input[5]=255 -> Edge[5]=0
+Input[6]=255 -> Edge[6]=0
+Input[7]=255 -> Edge[7]=0
+Input[8]=255 -> Edge[8]=0
+Input[9]=255 -> Edge[9]=0
+Sobel edge detection completed!
+Edge pixels (>30): 1384 out of 2304 (60.0694%)
+Edge image saved as: /home/fyt/teach_bili/course_3/images/sobel_edge_output_084116_882.png
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.6 seconds. CPU system time: 0.23 seconds. Elapsed time: 1.65 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 873.789 MB.
+INFO: [HLS 200-10] Analyzing design file '../code/sobel_edge.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.1 seconds. CPU system time: 0.28 seconds. Elapsed time: 1.37 seconds; current allocated memory: 876.023 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_22_3' is marked as complete unroll implied by the pipeline pragma (../code/sobel_edge.cpp:22:30)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_23_4' is marked as complete unroll implied by the pipeline pragma (../code/sobel_edge.cpp:23:34)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_22_3' (../code/sobel_edge.cpp:22:30) in function 'sobel_edge' completely with a factor of 3 (../code/sobel_edge.cpp:3:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_23_4' (../code/sobel_edge.cpp:23:34) in function 'sobel_edge' completely with a factor of 3 (../code/sobel_edge.cpp:3:0)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 8 in loop 'VITIS_LOOP_17_2'(../code/sobel_edge.cpp:17:26) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../code/sobel_edge.cpp:17:26)
+INFO: [HLS 214-115] Multiple burst reads of length 3 and bit width 8 has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../code/sobel_edge.cpp:24:40)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.57 seconds. CPU system time: 0.25 seconds. Elapsed time: 1.83 seconds; current allocated memory: 876.816 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 876.816 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 881.707 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 887.473 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_37_5' (../code/sobel_edge.cpp:37) in function 'sobel_edge' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_41_6' (../code/sobel_edge.cpp:41) in function 'sobel_edge' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'sobel_edge' (../code/sobel_edge.cpp:3:1)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 915.473 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_16_1' (../code/sobel_edge.cpp:16:31) in function 'sobel_edge' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 939.219 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sobel_edge' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sobel_edge_Pipeline_VITIS_LOOP_17_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_17_2'.
+WARNING: [HLS 200-880] The II Violation in module 'sobel_edge_Pipeline_VITIS_LOOP_17_2' (loop 'VITIS_LOOP_17_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('pixel.V', ../code/sobel_edge.cpp:24) on port 'gmem0' (../code/sobel_edge.cpp:24) and bus read operation ('pixel.V', ../code/sobel_edge.cpp:24) on port 'gmem0' (../code/sobel_edge.cpp:24).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'sobel_edge_Pipeline_VITIS_LOOP_17_2' (loop 'VITIS_LOOP_17_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('pixel.V', ../code/sobel_edge.cpp:24) on port 'gmem0' (../code/sobel_edge.cpp:24) and bus read operation ('pixel.V', ../code/sobel_edge.cpp:24) on port 'gmem0' (../code/sobel_edge.cpp:24).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-885] The II Violation in module 'sobel_edge_Pipeline_VITIS_LOOP_17_2' (loop 'VITIS_LOOP_17_2'): Unable to schedule bus request operation ('empty_25', ../code/sobel_edge.cpp:24) on port 'gmem0' (../code/sobel_edge.cpp:24) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'sobel_edge_Pipeline_VITIS_LOOP_17_2' (loop 'VITIS_LOOP_17_2'): Unable to schedule bus read operation ('pixel.V', ../code/sobel_edge.cpp:24) on port 'gmem0' (../code/sobel_edge.cpp:24) due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'sobel_edge_Pipeline_VITIS_LOOP_17_2' (loop 'VITIS_LOOP_17_2'): Unable to schedule bus read operation ('pixel.V', ../code/sobel_edge.cpp:24) on port 'gmem0' (../code/sobel_edge.cpp:24) due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 20, loop 'VITIS_LOOP_17_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 939.562 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 939.562 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sobel_edge_Pipeline_VITIS_LOOP_37_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_37_5'.
+WARNING: [HLS 200-885] The II Violation in module 'sobel_edge_Pipeline_VITIS_LOOP_37_5' (loop 'VITIS_LOOP_37_5'): Unable to schedule bus request operation ('gmem1_addr_2_req', ../code/sobel_edge.cpp:39) on port 'gmem1' (../code/sobel_edge.cpp:39) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 10, loop 'VITIS_LOOP_37_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 939.695 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 939.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sobel_edge_Pipeline_VITIS_LOOP_41_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_41_6'.
+WARNING: [HLS 200-885] The II Violation in module 'sobel_edge_Pipeline_VITIS_LOOP_41_6' (loop 'VITIS_LOOP_41_6'): Unable to schedule bus request operation ('gmem1_addr_4_req', ../code/sobel_edge.cpp:43) on port 'gmem1' (../code/sobel_edge.cpp:43) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 9, loop 'VITIS_LOOP_41_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 940.008 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 940.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sobel_edge' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 940.484 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 940.484 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sobel_edge_Pipeline_VITIS_LOOP_17_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sobel_edge_Pipeline_VITIS_LOOP_17_2' pipeline 'VITIS_LOOP_17_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sobel_edge_Pipeline_VITIS_LOOP_17_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 940.953 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sobel_edge_Pipeline_VITIS_LOOP_37_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sobel_edge_Pipeline_VITIS_LOOP_37_5' pipeline 'VITIS_LOOP_37_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sobel_edge_Pipeline_VITIS_LOOP_37_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 943.289 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sobel_edge_Pipeline_VITIS_LOOP_41_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sobel_edge_Pipeline_VITIS_LOOP_41_6' pipeline 'VITIS_LOOP_41_6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sobel_edge_Pipeline_VITIS_LOOP_41_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 944.559 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sobel_edge' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_edge/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_edge/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_edge/input_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_edge/output_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_edge/rows' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_edge/cols' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sobel_edge' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'input_r', 'output_r', 'rows', 'cols' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mul_31ns_32s_63_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sobel_edge'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 947.215 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 951.203 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 957.215 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for sobel_edge.
+INFO: [VLOG 209-307] Generating Verilog RTL for sobel_edge.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.81 seconds. CPU system time: 0.59 seconds. Elapsed time: 4.39 seconds; current allocated memory: 83.520 MB.
+INFO: [HLS 200-1510] Running: cosim_design -ldflags -L/home/fyt/.conda/envs/opencv_env/lib -Wl,-rpath,/home/fyt/.conda/envs/opencv_env/lib -lopencv_core -lopencv_imgproc -lopencv_imgcodecs 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/opt/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling apatb_sobel_edge.cpp
+   Compiling main.cpp_pre.cpp.tb.cpp
+   Compiling sobel_edge.cpp_pre.cpp.tb.cpp
+   Compiling apatb_sobel_edge_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Loaded grayscale image: 48x48 = 2304 pixels
+Output will be saved as: /home/fyt/teach_bili/course_3/images/sobel_edge_output_084126_120.png
+First 10 edge values:
+Input[0]=255 -> Edge[0]=0
+Input[1]=255 -> Edge[1]=0
+Input[2]=255 -> Edge[2]=0
+Input[3]=255 -> Edge[3]=0
+Input[4]=255 -> Edge[4]=0
+Input[5]=255 -> Edge[5]=0
+Input[6]=255 -> Edge[6]=0
+Input[7]=255 -> Edge[7]=0
+Input[8]=255 -> Edge[8]=0
+Input[9]=255 -> Edge[9]=0
+Sobel edge detection completed!
+Edge pixels (>30): 1384 out of 2304 (60.0694%)
+Edge image saved as: /home/fyt/teach_bili/course_3/images/sobel_edge_output_084126_120.png
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_sobel_edge_top glbl -Oenable_linking_all_libraries -prj sobel_edge.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib ieee_proposed=./ieee_proposed -s sobel_edge 
+Multi-threading is on. Using 30 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/AESL_axi_master_gmem0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_sobel_edge_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_37_5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_37_5
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_mul_32s_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_edge_mul_32s_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_edge
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/AESL_axi_master_gmem1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_edge_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_gmem1_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_load
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_store
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_read
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_write
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_srl
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_mul_31ns_32s_63_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_edge_mul_31ns_32s_63_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_edge_control_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_41_6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_41_6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_17_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_17_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_gmem0_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_load
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_store
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_read
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_write
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_srl
+INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.sobel_edge_flow_control_loop_pip...
+Compiling module xil_defaultlib.sobel_edge_sobel_edge_Pipeline_V...
+Compiling module xil_defaultlib.sobel_edge_sobel_edge_Pipeline_V...
+Compiling module xil_defaultlib.sobel_edge_sobel_edge_Pipeline_V...
+Compiling module xil_defaultlib.sobel_edge_control_s_axi
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_mem(MEM_S...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_fifo(MEM_...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_store(NUM...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_mem(MEM_S...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_fifo(MEM_...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_load(NUM_...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_reg_slice...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_reg_slice...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_throttle(...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_reg_slice...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_write(CON...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_reg_slice...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi_read(C_US...
+Compiling module xil_defaultlib.sobel_edge_gmem0_m_axi(CONSERVAT...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_mem(MEM_S...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_fifo(MEM_...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_store(NUM...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_mem(MEM_S...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_fifo(MEM_...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_load(NUM_...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_reg_slice...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_reg_slice...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_throttle(...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_reg_slice...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_write(CON...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_reg_slice...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi_read(C_US...
+Compiling module xil_defaultlib.sobel_edge_gmem1_m_axi(CONSERVAT...
+Compiling module xil_defaultlib.sobel_edge_mul_31ns_32s_63_2_1(N...
+Compiling module xil_defaultlib.sobel_edge_mul_32s_32s_32_2_1(NU...
+Compiling module xil_defaultlib.sobel_edge
+Compiling module xil_defaultlib.AESL_axi_master_gmem0
+Compiling module xil_defaultlib.AESL_axi_master_gmem1
+Compiling module xil_defaultlib.AESL_axi_slave_control
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=14)
+Compiling module xil_defaultlib.upc_loop_intf
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=8)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_sobel_edge_top
+Compiling module work.glbl
+Built simulation snapshot sobel_edge
+
+****** xsim v2022.2.2 (64-bit)
+  **** SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
+  **** IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+    ** Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/sobel_edge/xsim_script.tcl
+# xsim {sobel_edge} -autoloadwcfg -tclbatch {sobel_edge.tcl}
+Time resolution is 1 ps
+source sobel_edge.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "125000"
+// RTL Simulation : 1 / 1 [n/a] @ "320225000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 320285 ns : File "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge.autotb.v" Line 586
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Jun  1 08:41:33 2025...
+INFO: [COSIM 212-316] Starting C post checking ...
+Loaded grayscale image: 48x48 = 2304 pixels
+Output will be saved as: /home/fyt/teach_bili/course_3/images/sobel_edge_output_084133_253.png
+First 10 edge values:
+Input[0]=255 -> Edge[0]=0
+Input[1]=255 -> Edge[1]=0
+Input[2]=255 -> Edge[2]=0
+Input[3]=255 -> Edge[3]=0
+Input[4]=255 -> Edge[4]=0
+Input[5]=255 -> Edge[5]=0
+Input[6]=255 -> Edge[6]=0
+Input[7]=255 -> Edge[7]=0
+Input[8]=255 -> Edge[8]=0
+Input[9]=255 -> Edge[9]=0
+Sobel edge detection completed!
+Edge pixels (>30): 1384 out of 2304 (60.0694%)
+Edge image saved as: /home/fyt/teach_bili/course_3/images/sobel_edge_output_084133_253.png
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 14.44 seconds. CPU system time: 1.32 seconds. Elapsed time: 12.05 seconds; current allocated memory: 22.305 MB.
+INFO: [HLS 200-112] Total CPU user time: 20.9 seconds. Total CPU system time: 2.34 seconds. Total elapsed time: 29.28 seconds; peak allocated memory: 979.520 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sun Jun  1 08:41:33 2025...

@@ -1,0 +1,23 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../code/main.cpp in debug mode
+   Compiling ../../../../../code/sobel_edge.cpp in debug mode
+   Generating csim.exe
+Loaded grayscale image: 48x48 = 2304 pixels
+Output will be saved as: /home/fyt/teach_bili/course_3/images/sobel_edge_output_084116_882.png
+First 10 edge values:
+Input[0]=255 -> Edge[0]=0
+Input[1]=255 -> Edge[1]=0
+Input[2]=255 -> Edge[2]=0
+Input[3]=255 -> Edge[3]=0
+Input[4]=255 -> Edge[4]=0
+Input[5]=255 -> Edge[5]=0
+Input[6]=255 -> Edge[6]=0
+Input[7]=255 -> Edge[7]=0
+Input[8]=255 -> Edge[8]=0
+Input[9]=255 -> Edge[9]=0
+Sobel edge detection completed!
+Edge pixels (>30): 1384 out of 2304 (60.0694%)
+Edge image saved as: /home/fyt/teach_bili/course_3/images/sobel_edge_output_084116_882.png
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

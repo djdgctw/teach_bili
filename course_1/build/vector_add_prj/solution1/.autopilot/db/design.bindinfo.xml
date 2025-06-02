@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln13_fu_109_p2" SOURCE="../code/vector_add.cpp:13" VARIABLE="icmp_ln13" MODULE="vector_add_Pipeline_VITIS_LOOP_13_1" LOOP="VITIS_LOOP_13_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln13_fu_115_p2" SOURCE="../code/vector_add.cpp:13" VARIABLE="add_ln13" MODULE="vector_add_Pipeline_VITIS_LOOP_13_1" LOOP="VITIS_LOOP_13_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln186_fu_137_p2" SOURCE="/opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h:186" VARIABLE="add_ln186" MODULE="vector_add_Pipeline_VITIS_LOOP_13_1" LOOP="VITIS_LOOP_13_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln13_fu_116_p2" SOURCE="../code/vector_add.cpp:13" VARIABLE="icmp_ln13" MODULE="vector_add" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op select" ID="" IMPL="auto_sel" LATENCY="0" OPTYPE="select" PRAGMA="" RTLNAME="empty_fu_132_p3" SOURCE="../code/vector_add.cpp:13" VARIABLE="empty" MODULE="vector_add" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axilite" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="control_s_axi_U" SOURCE="" VARIABLE="" MODULE="vector_add" LOOP="" BUNDLEDNAME="control" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axi_master" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="gmem0_m_axi_U" SOURCE="" VARIABLE="" MODULE="vector_add" LOOP="" BUNDLEDNAME="gmem0" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axi_master" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="gmem1_m_axi_U" SOURCE="" VARIABLE="" MODULE="vector_add" LOOP="" BUNDLEDNAME="gmem1" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

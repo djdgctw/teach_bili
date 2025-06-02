@@ -1,0 +1,14 @@
+Vector Subtract-1 Test Started
+Vector size: 64 elements
+调用vector_add函数（现在是减1功能）
+All results correct!
+ERROR: System received a signal named SIGSEGV and the program has to stop immediately!
+This signal was generated when a program tries to read or write outside the memory that is allocated for it, or to write memory that can only be read.
+Possible cause of this problem may be:
+  1) Missing depth information for one or more pointers to arrays in the interface;
+  2) Insufficient depth setting for array argument(s);
+  3) Excessive depth setting for array argument(s), that exceeds the maximum virtual memory size for the process;
+  4) Null pointer etc.
+Current execution stopped during CodeState = DUMP_OUTPUTS.
+You can search CodeState variable name in apatb*.cpp file under ./sim/wrapc dir to locate the position.
+

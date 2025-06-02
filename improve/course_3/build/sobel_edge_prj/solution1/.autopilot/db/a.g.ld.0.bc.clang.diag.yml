@@ -1,0 +1,528 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 22, Column: 30 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_22_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 23, Column: 34 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_23_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_22_3
+  - String:          ''' ('
+  - LoopLoc:         '../code/sobel_edge.cpp:22:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          sobel_edge
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_23_4
+  - String:          ''' ('
+  - LoopLoc:         '../code/sobel_edge.cpp:23:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          sobel_edge
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_23_4
+  - String:          ''' ('
+  - LoopLoc:         '../code/sobel_edge.cpp:23:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          sobel_edge
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_23_4
+  - String:          ''' ('
+  - LoopLoc:         '../code/sobel_edge.cpp:23:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          sobel_edge
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 24, Column: 40 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.2.load.28
+  - String:          ', '
+  - String:          for.inc.2.load.52
+  - String:          ', '
+  - String:          for.inc.2.load.77
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_17_2
+  - String:          ' '
+  - LoopLoc:         '../code/sobel_edge.cpp:17:26'
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 24, Column: 40 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.2.load.194
+  - String:          ', '
+  - String:          for.inc.2.load.222
+  - String:          ', '
+  - String:          for.inc.2.load.246
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep86seq
+  - String:          ' '
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_17_2
+  - String:          ' '
+  - LoopLoc:         '../code/sobel_edge.cpp:17:26'
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 17, Column: 26 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.2.store.284
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep87seq
+  - String:          ' '
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_17_2
+  - String:          ' '
+  - LoopLoc:         '../code/sobel_edge.cpp:17:26'
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 24, Column: 40 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 24, Column: 40 }
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc.2.load.117
+  - String:          ' '
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 24, Column: 40 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 24, Column: 40 }
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc.2.load.155
+  - String:          ' '
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 17, Column: 26 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep87seq
+  - String:          ' '
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_16_1
+  - String:          ' '
+  - LoopLoc:         '../code/sobel_edge.cpp:16:22'
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 38, Column: 26 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc77.store.5
+  - String:          ' '
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_37_5
+  - String:          ' '
+  - LoopLoc:         '../code/sobel_edge.cpp:37:22'
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 39, Column: 37 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc77.store.10
+  - String:          ' '
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_37_5
+  - String:          ' '
+  - LoopLoc:         '../code/sobel_edge.cpp:37:22'
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 42, Column: 19 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 43, Column: 39 }
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc94.store.4
+  - String:          ' '
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 43, Column: 39 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 42, Column: 19 }
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc94.store.8
+  - String:          ' '
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 24, Column: 40 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 24, Column: 40 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep86seq
+  - String:          ' '
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 17, Column: 26 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep87seq
+  - String:          ' '
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_17_2
+  - String:          ' '
+  - LoopLoc:         '../code/sobel_edge.cpp:17:26'
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 17, Column: 26 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_17_2
+  - String:          ' '
+  - LoopLoc:         '../code/sobel_edge.cpp:17:26'
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 17, Column: 26 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_17_2
+  - String:          '''('
+  - LoopLoc:         '../code/sobel_edge.cpp:17:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 24, Column: 40 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 24, Column: 40 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 24, Column: 40 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'sobel_edge(ap_uint<8> const*, ap_uint<8>*, int, int)'
+    DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../code/sobel_edge.cpp, Line: 24, Column: 40 }
+Function:        _Z10sobel_edgePK7ap_uintILi8EEPS0_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
