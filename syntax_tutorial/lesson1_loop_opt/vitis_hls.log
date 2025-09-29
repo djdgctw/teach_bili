@@ -1,0 +1,345 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2.2 (64-bit)
+  **** SW Build 3779808 on Feb 17 2023
+  **** IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+    ** Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'fyt' on host 'fpgaserver-9950x' (Linux_x86_64 version 5.15.0-151-generic) on Mon Sep 29 05:18:06 UTC 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/fyt/A/teach_bili/improve/syntax_tutorial/lesson1_loop_opt'
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: source run_hls.tcl
+开始综合basic版本...
+INFO: [HLS 200-1510] Running: open_project vector_add_prj_basic 
+INFO: [HLS 200-10] Opening project '/home/fyt/A/teach_bili/improve/syntax_tutorial/lesson1_loop_opt/vector_add_prj_basic'.
+INFO: [HLS 200-1510] Running: set_top vector_add_basic 
+INFO: [HLS 200-1510] Running: add_files vector_add.cpp 
+INFO: [HLS 200-10] Adding design file 'vector_add.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/fyt/A/teach_bili/improve/syntax_tutorial/lesson1_loop_opt/vector_add_prj_basic/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xczu9eg-ffvb1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+Running Dispatch Server on port: 45027
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.03 seconds; current allocated memory: 875.992 MB.
+INFO: [HLS 200-10] Analyzing design file 'vector_add.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.05 seconds. CPU system time: 0.31 seconds. Elapsed time: 1.36 seconds; current allocated memory: 875.992 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.35 seconds. CPU system time: 0.27 seconds. Elapsed time: 1.62 seconds; current allocated memory: 875.992 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 875.992 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 876.445 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 876.512 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_6_1' (vector_add.cpp:6) in function 'vector_add_basic' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 897.734 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 897.734 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'vector_add_basic' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'vector_add_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_6_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_6_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 897.734 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 897.734 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'vector_add_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_basic/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_basic/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_basic/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'vector_add_basic' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'vector_add_basic' pipeline 'VITIS_LOOP_6_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'vector_add_basic'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 897.734 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 897.734 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 897.734 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for vector_add_basic.
+INFO: [VLOG 209-307] Generating Verilog RTL for vector_add_basic.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 286.53 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2.68 seconds. CPU system time: 0.6 seconds. Elapsed time: 3.28 seconds; current allocated memory: 21.742 MB.
+INFO: [HLS 200-1510] Running: close_project 
+开始综合unroll版本...
+INFO: [HLS 200-1510] Running: open_project vector_add_prj_unroll 
+INFO: [HLS 200-10] Opening project '/home/fyt/A/teach_bili/improve/syntax_tutorial/lesson1_loop_opt/vector_add_prj_unroll'.
+INFO: [HLS 200-1510] Running: set_top vector_add_unroll 
+INFO: [HLS 200-1510] Running: add_files vector_add.cpp 
+INFO: [HLS 200-10] Adding design file 'vector_add.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/fyt/A/teach_bili/improve/syntax_tutorial/lesson1_loop_opt/vector_add_prj_unroll/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xczu9eg-ffvb1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 897.734 MB.
+INFO: [HLS 200-10] Analyzing design file 'vector_add.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.25 seconds. CPU system time: 0.32 seconds. Elapsed time: 1.58 seconds; current allocated memory: 897.734 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_17_1' (vector_add.cpp:17:19) in function 'vector_add_unroll' partially with a factor of 2 (vector_add.cpp:12:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Cyclic partitioning with factor 2 on dimension 1. (vector_add.cpp:12:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Cyclic partitioning with factor 2 on dimension 1. (vector_add.cpp:12:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Cyclic partitioning with factor 2 on dimension 1. (vector_add.cpp:12:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.45 seconds. CPU system time: 0.29 seconds. Elapsed time: 1.74 seconds; current allocated memory: 897.734 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 897.734 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 897.734 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 897.734 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_17_1' (vector_add.cpp:17) in function 'vector_add_unroll' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 913.734 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 913.734 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'vector_add_unroll' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'vector_add_unroll' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_17_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_17_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.05 seconds; current allocated memory: 913.734 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 913.734 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'vector_add_unroll' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_unroll/A_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_unroll/A_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_unroll/B_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_unroll/B_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_unroll/C_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_unroll/C_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'vector_add_unroll' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'vector_add_unroll' pipeline 'VITIS_LOOP_17_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'vector_add_unroll'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 913.734 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 913.734 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 913.734 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for vector_add_unroll.
+INFO: [VLOG 209-307] Generating Verilog RTL for vector_add_unroll.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 286.53 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2.99 seconds. CPU system time: 0.66 seconds. Elapsed time: 3.65 seconds; current allocated memory: 16.000 MB.
+INFO: [HLS 200-1510] Running: close_project 
+开始综合pipeline版本...
+INFO: [HLS 200-1510] Running: open_project vector_add_prj_pipeline 
+INFO: [HLS 200-10] Opening project '/home/fyt/A/teach_bili/improve/syntax_tutorial/lesson1_loop_opt/vector_add_prj_pipeline'.
+INFO: [HLS 200-1510] Running: set_top vector_add_pipeline 
+INFO: [HLS 200-1510] Running: add_files vector_add.cpp 
+INFO: [HLS 200-10] Adding design file 'vector_add.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/fyt/A/teach_bili/improve/syntax_tutorial/lesson1_loop_opt/vector_add_prj_pipeline/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xczu9eg-ffvb1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 913.734 MB.
+INFO: [HLS 200-10] Analyzing design file 'vector_add.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.39 seconds. CPU system time: 0.37 seconds. Elapsed time: 1.82 seconds; current allocated memory: 913.734 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_30_1' is marked as complete unroll implied by the pipeline pragma (vector_add.cpp:30:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_30_1' (vector_add.cpp:30:19) in function 'vector_add_pipeline' completely with a factor of 1024 (vector_add.cpp:24:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Cyclic partitioning with factor 8 on dimension 1. (vector_add.cpp:24:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Cyclic partitioning with factor 8 on dimension 1. (vector_add.cpp:24:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Cyclic partitioning with factor 8 on dimension 1. (vector_add.cpp:24:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.26 seconds. CPU system time: 0.32 seconds. Elapsed time: 4.58 seconds; current allocated memory: 913.734 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 913.734 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.45 seconds. CPU system time: 0 seconds. Elapsed time: 0.46 seconds; current allocated memory: 917.684 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 918.500 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1.93 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.94 seconds; current allocated memory: 966.117 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.65 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.67 seconds; current allocated memory: 987.137 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'vector_add_pipeline' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'vector_add_pipeline' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'vector_add_pipeline'.
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_pipeline' (function 'vector_add_pipeline'): Unable to schedule 'load' operation ('A_0_load_1', vector_add.cpp:31) on array 'A_0' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_pipeline' (function 'vector_add_pipeline'): Unable to schedule 'load' operation ('A_0_load_3', vector_add.cpp:31) on array 'A_0' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_pipeline' (function 'vector_add_pipeline'): Unable to schedule 'load' operation ('A_0_load_5', vector_add.cpp:31) on array 'A_0' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_pipeline' (function 'vector_add_pipeline'): Unable to schedule 'load' operation ('A_0_load_7', vector_add.cpp:31) on array 'A_0' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_pipeline' (function 'vector_add_pipeline'): Unable to schedule 'load' operation ('A_0_load_69', vector_add.cpp:31) on array 'A_0' due to limited memory ports (II = 35). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_pipeline' (function 'vector_add_pipeline'): Unable to schedule 'load' operation ('A_0_load_101', vector_add.cpp:31) on array 'A_0' due to limited memory ports (II = 51). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_pipeline' (function 'vector_add_pipeline'): Unable to schedule 'load' operation ('A_0_load_117', vector_add.cpp:31) on array 'A_0' due to limited memory ports (II = 59). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_pipeline' (function 'vector_add_pipeline'): Unable to schedule 'load' operation ('A_0_load_125', vector_add.cpp:31) on array 'A_0' due to limited memory ports (II = 63). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 64, Depth = 65, function 'vector_add_pipeline'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 21.69 seconds. CPU system time: 0.03 seconds. Elapsed time: 21.74 seconds; current allocated memory: 1.007 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.28 seconds; current allocated memory: 1.007 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'vector_add_pipeline' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/A_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/A_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/A_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/A_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/A_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/A_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/A_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/A_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/B_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/B_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/B_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/B_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/B_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/B_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/B_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/B_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/C_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/C_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/C_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/C_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/C_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/C_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/C_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_pipeline/C_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'vector_add_pipeline' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'vector_add_pipeline' pipeline 'vector_add_pipeline' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'vector_add_pipeline'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.26 seconds. CPU system time: 0 seconds. Elapsed time: 1.27 seconds; current allocated memory: 1.013 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.6 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.66 seconds; current allocated memory: 1.106 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.46 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.48 seconds; current allocated memory: 1.124 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for vector_add_pipeline.
+INFO: [VLOG 209-307] Generating Verilog RTL for vector_add_pipeline.
+INFO: [HLS 200-789] **** Estimated Fmax: 286.53 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 36.03 seconds. CPU system time: 0.85 seconds. Elapsed time: 36.97 seconds; current allocated memory: 237.102 MB.
+INFO: [HLS 200-1510] Running: close_project 
+开始综合optimized版本...
+INFO: [HLS 200-1510] Running: open_project vector_add_prj_opt 
+INFO: [HLS 200-10] Creating and opening project '/home/fyt/A/teach_bili/improve/syntax_tutorial/lesson1_loop_opt/vector_add_prj_opt'.
+INFO: [HLS 200-1510] Running: set_top vector_add_optimized 
+INFO: [HLS 200-1510] Running: add_files vector_add.cpp 
+INFO: [HLS 200-10] Adding design file 'vector_add.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/home/fyt/A/teach_bili/improve/syntax_tutorial/lesson1_loop_opt/vector_add_prj_opt/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xczu9eg-ffvb1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.124 GB.
+INFO: [HLS 200-10] Analyzing design file 'vector_add.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.15 seconds. CPU system time: 0.42 seconds. Elapsed time: 1.58 seconds; current allocated memory: 1.124 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_42_1' is marked as complete unroll implied by the pipeline pragma (vector_add.cpp:42:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_42_1' (vector_add.cpp:42:19) in function 'vector_add_optimized' completely with a factor of 1024 (vector_add.cpp:36:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Cyclic partitioning with factor 4 on dimension 1. (vector_add.cpp:36:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Cyclic partitioning with factor 4 on dimension 1. (vector_add.cpp:36:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Cyclic partitioning with factor 4 on dimension 1. (vector_add.cpp:36:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.31 seconds. CPU system time: 0.33 seconds. Elapsed time: 4.65 seconds; current allocated memory: 1.124 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.124 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 1.124 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.124 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.34 seconds; current allocated memory: 1.124 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.87 seconds. CPU system time: 0 seconds. Elapsed time: 0.87 seconds; current allocated memory: 1.124 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'vector_add_optimized' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'vector_add_optimized' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'vector_add_optimized'.
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_optimized' (function 'vector_add_optimized'): Unable to schedule 'load' operation ('A_0_load_1', vector_add.cpp:44) on array 'A_0' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_optimized' (function 'vector_add_optimized'): Unable to schedule 'load' operation ('A_0_load_3', vector_add.cpp:44) on array 'A_0' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_optimized' (function 'vector_add_optimized'): Unable to schedule 'load' operation ('A_0_load_5', vector_add.cpp:44) on array 'A_0' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_optimized' (function 'vector_add_optimized'): Unable to schedule 'load' operation ('A_0_load_7', vector_add.cpp:44) on array 'A_0' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_optimized' (function 'vector_add_optimized'): Unable to schedule 'load' operation ('A_0_load_133', vector_add.cpp:44) on array 'A_0' due to limited memory ports (II = 67). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_optimized' (function 'vector_add_optimized'): Unable to schedule 'load' operation ('A_0_load_195', vector_add.cpp:44) on array 'A_0' due to limited memory ports (II = 98). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_optimized' (function 'vector_add_optimized'): Unable to schedule 'load' operation ('A_0_load_227', vector_add.cpp:44) on array 'A_0' due to limited memory ports (II = 114). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_optimized' (function 'vector_add_optimized'): Unable to schedule 'load' operation ('A_0_load_243', vector_add.cpp:44) on array 'A_0' due to limited memory ports (II = 122). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_optimized' (function 'vector_add_optimized'): Unable to schedule 'load' operation ('A_0_load_251', vector_add.cpp:44) on array 'A_0' due to limited memory ports (II = 126). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_add_optimized' (function 'vector_add_optimized'): Unable to schedule 'load' operation ('A_0_load_253', vector_add.cpp:44) on array 'A_0' due to limited memory ports (II = 127). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 128, Depth = 129, function 'vector_add_optimized'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 58.76 seconds. CPU system time: 0.04 seconds. Elapsed time: 58.79 seconds; current allocated memory: 1.132 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.4 seconds. CPU system time: 0 seconds. Elapsed time: 1.42 seconds; current allocated memory: 1.132 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'vector_add_optimized' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_optimized/A_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_optimized/A_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_optimized/A_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_optimized/A_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_optimized/B_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_optimized/B_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_optimized/B_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_optimized/B_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_optimized/C_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_optimized/C_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_optimized/C_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add_optimized/C_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'vector_add_optimized' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'vector_add_optimized' pipeline 'vector_add_optimized' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'vector_add_optimized'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.47 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.5 seconds; current allocated memory: 1.141 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.5 seconds. CPU system time: 0.12 seconds. Elapsed time: 1.63 seconds; current allocated memory: 1.230 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.47 seconds. CPU system time: 0 seconds. Elapsed time: 1.47 seconds; current allocated memory: 1.245 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for vector_add_optimized.
+INFO: [VLOG 209-307] Generating Verilog RTL for vector_add_optimized.
+INFO: [HLS 200-789] **** Estimated Fmax: 286.53 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 72.73 seconds. CPU system time: 0.96 seconds. Elapsed time: 73.71 seconds; current allocated memory: 124.395 MB.
+INFO: [HLS 200-1510] Running: close_project 
+所有版本综合完成！
+INFO: [HLS 200-112] Total CPU user time: 116.04 seconds. Total CPU system time: 3.4 seconds. Total elapsed time: 129.49 seconds; peak allocated memory: 1.245 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Sep 29 05:20:15 2025...

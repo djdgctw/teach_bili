@@ -42,19 +42,19 @@ open_solution -reset solution1
 set_part {xc7z020clg400-1}
 
 # 创建时钟约束，设置时钟周期为10ns（即100MHz频率）
-create_clock -period 10 -name default
+create_clock -period 5 -name default
 
 # ============ HLS流程执行部分 ============
 # 运行C仿真（CSIM），验证算法功能正确性
 # -ldflags: 链接OpenCV库文件，确保测试程序能正常运行
-csim_design -ldflags "-L$opencv_lib -Wl,-rpath,$opencv_lib -lopencv_core -lopencv_imgproc -lopencv_imgcodecs"
+# csim_design -ldflags "-L$opencv_lib -Wl,-rpath,$opencv_lib -lopencv_core -lopencv_imgproc -lopencv_imgcodecs"
 
 # 运行C综合（CSYNTH），将C++代码转换为RTL硬件描述
 csynth_design
 
 # 运行C/RTL协同仿真（COSIM），验证综合后RTL与C++行为一致性
 # -ldflags: 同样需要链接OpenCV库以支持测试文件的执行
-cosim_design -ldflags "-L$opencv_lib -Wl,-rpath,$opencv_lib -lopencv_core -lopencv_imgproc -lopencv_imgcodecs"
+# cosim_design -ldflags "-L$opencv_lib -Wl,-rpath,$opencv_lib -lopencv_core -lopencv_imgproc -lopencv_imgcodecs"
 
 # 退出Vitis HLS工具
 exit 

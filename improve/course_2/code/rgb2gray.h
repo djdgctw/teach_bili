@@ -3,6 +3,6 @@
 
 #include <ap_int.h>
 
-void rgb2gray(const ap_uint<24> *rgb, ap_uint<8> *gray, int size);
+void resize_accel(const ap_uint<24> *rgb, ap_uint<8> *gray, int size);
 
 #endif // RGB2GRAY_H 

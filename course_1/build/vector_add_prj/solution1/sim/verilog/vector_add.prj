@@ -1,0 +1,13 @@
+sv work "glbl.v"
+sv xil_defaultlib "vector_add_vector_add_Pipeline_VITIS_LOOP_13_1.v"
+sv xil_defaultlib "AESL_axi_master_gmem0.v"
+sv xil_defaultlib "vector_add_gmem0_m_axi.v"
+sv xil_defaultlib "vector_add.v"
+sv xil_defaultlib "vector_add.autotb.v"
+sv xil_defaultlib "vector_add_control_s_axi.v"
+sv xil_defaultlib "AESL_axi_master_gmem1.v"
+sv xil_defaultlib "AESL_axi_slave_control.v"
+sv xil_defaultlib "vector_add_gmem1_m_axi.v"
+sv xil_defaultlib "vector_add_flow_control_loop_pipe_sequential_init.v"
+sv xil_defaultlib "dataflow_monitor.sv"
+

@@ -4,7 +4,7 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../../code/vector_add.cpp in debug mode
    Generating csim.exe
 Vector Subtract-1 Test Started
-Vector size: 64 elements
+Vector size: 256 elements
 调用vector_add函数（现在是减1功能）
 All results correct!
 INFO: [SIM 1] CSim done with 0 errors.

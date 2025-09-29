@@ -3,13 +3,13 @@
 // Tool Version Limit: 2019.12
 // Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
-# 1 "/home/fyt/teach_bili/course_1/code/vector_add.cpp"
+# 1 "/home/fyt/A/teach_bili/course_1/code/vector_add.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/home/fyt/teach_bili/course_1/code/vector_add.cpp"
-# 1 "/home/fyt/teach_bili/course_1/code/vector_add.h" 1
+# 1 "/home/fyt/A/teach_bili/course_1/code/vector_add.cpp"
+# 1 "/home/fyt/A/teach_bili/course_1/code/vector_add.h" 1
 
 
 
@@ -61811,12 +61811,12 @@ inline bool operator!=(
 }
 # 366 "/opt/Xilinx/Vitis_HLS/2022.2/include/ap_fixed.h" 2
 # 361 "/opt/Xilinx/Vitis_HLS/2022.2/include/ap_int.h" 2
-# 5 "/home/fyt/teach_bili/course_1/code/vector_add.h" 2
+# 5 "/home/fyt/A/teach_bili/course_1/code/vector_add.h" 2
 
 void vector_add(const ap_uint<32> *a,
                 ap_uint<32> *c,
                 int size);
-# 2 "/home/fyt/teach_bili/course_1/code/vector_add.cpp" 2
+# 2 "/home/fyt/A/teach_bili/course_1/code/vector_add.cpp" 2
 
 void vector_add(const ap_uint<32> *a,
                 ap_uint<32> *c,
@@ -61853,5 +61853,5 @@ apatb_vector_add_ir(a, c, size);
 return ;
 }
 #endif
-# 17 "/home/fyt/teach_bili/course_1/code/vector_add.cpp"
+# 17 "/home/fyt/A/teach_bili/course_1/code/vector_add.cpp"
 

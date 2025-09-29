@@ -1,0 +1,84 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 5 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.02 seconds; current allocated memory: 873.805 MB.
+INFO: [HLS 200-10] Analyzing design file '../code/rgb2gray.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.11 seconds. CPU system time: 0.33 seconds. Elapsed time: 1.44 seconds; current allocated memory: 875.453 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_10_1'(../code/rgb2gray.cpp:10:19) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../code/rgb2gray.cpp:10:19)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 8 in loop 'VITIS_LOOP_10_1'(../code/rgb2gray.cpp:10:19) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../code/rgb2gray.cpp:10:19)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.46 seconds. CPU system time: 0.26 seconds. Elapsed time: 1.74 seconds; current allocated memory: 876.023 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 876.023 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 881.105 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 889.246 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 917.473 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 926.082 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'rgb2gray' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rgb2gray_Pipeline_VITIS_LOOP_10_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=ret_V_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=ret_V_6) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_10_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 14, loop 'VITIS_LOOP_10_1'
+WARNING: [HLS 200-871] Estimated clock period (4.11031ns) exceeds the target (target clock period: 5ns, clock uncertainty: 1.35ns, effective delay budget: 3.65ns).
+WARNING: [HLS 200-1016] The critical path in module 'rgb2gray_Pipeline_VITIS_LOOP_10_1' consists of the following:	'alloca' operation ('i') [6]  (0 ns)
+	'load' operation ('i_load', ../code/rgb2gray.cpp:10) on local variable 'i' [16]  (0 ns)
+	'add' operation ('add_ln10', ../code/rgb2gray.cpp:10) [23]  (2.52 ns)
+	'store' operation ('i_write_ln10', ../code/rgb2gray.cpp:10) of variable 'add_ln10', ../code/rgb2gray.cpp:10 on local variable 'i' [52]  (1.59 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.05 seconds; current allocated memory: 926.082 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 926.082 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rgb2gray' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (4.061ns) exceeds the target (target clock period: 5ns, clock uncertainty: 1.35ns, effective delay budget: 3.65ns).
+WARNING: [HLS 200-1016] The critical path in module 'rgb2gray' consists of the following:	'call' operation ('_ln3', ../code/rgb2gray.cpp:3) to 'rgb2gray_Pipeline_VITIS_LOOP_10_1' [32]  (4.06 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 926.082 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 926.082 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rgb2gray_Pipeline_VITIS_LOOP_10_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'rgb2gray_Pipeline_VITIS_LOOP_10_1' pipeline 'VITIS_LOOP_10_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem0_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem1_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem1_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'rgb2gray_Pipeline_VITIS_LOOP_10_1/m_axi_gmem1_AWID' to 0.

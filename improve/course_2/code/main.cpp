@@ -14,10 +14,10 @@ int main() {
     std::stringstream timestamp;
     timestamp << std::put_time(std::localtime(&time_t), "%H%M%S") << "_" << std::setfill('0') << std::setw(3) << ms.count();
     
-    std::string output_filename = "/home/fyt/teach_bili/improve/course_2/images/ceshi_gray_output_" + timestamp.str() + ".png";
+    std::string output_filename = "/home/fyt/A/teach_bili/improve/course_2/images/ceshi_gray_output_" + timestamp.str() + ".png";
     
     // 读取测试图片 - 使用相对路径从images目录读取
-    cv::Mat img = cv::imread("/home/fyt/teach_bili/improve/course_2/images/ceshi_small.png", cv::IMREAD_COLOR);
+    cv::Mat img = cv::imread("/home/fyt/A/teach_bili/improve/course_2/images/ceshi_small.png", cv::IMREAD_COLOR);
     if (img.empty()) {
         std::cerr << "Error: Could not load ceshi_small.png from images directory" << std::endl;
         return -1;

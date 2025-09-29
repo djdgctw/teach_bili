@@ -1,0 +1,377 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2.2 (64-bit)
+  **** SW Build 3779808 on Feb 17 2023
+  **** IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+    ** Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'fyt' on host 'fpgaserver-9950x' (Linux_x86_64 version 5.15.0-151-generic) on Mon Sep 29 05:37:45 UTC 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/fyt/A/teach_bili/syntax_tutorial/lesson2_array_opt'
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: source run_hls.tcl
+开始综合basic版本...
+INFO: [HLS 200-1510] Running: open_project matrix_prj_basic 
+INFO: [HLS 200-10] Creating and opening project '/home/fyt/A/teach_bili/syntax_tutorial/lesson2_array_opt/matrix_prj_basic'.
+INFO: [HLS 200-1510] Running: set_top matrix_multiply_basic 
+INFO: [HLS 200-1510] Running: add_files matrix_multiply.cpp 
+INFO: [HLS 200-10] Adding design file 'matrix_multiply.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/home/fyt/A/teach_bili/syntax_tutorial/lesson2_array_opt/matrix_prj_basic/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xczu9eg-ffvb1156-2-e 
+INFO: [HLS 200-1611] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+Running Dispatch Server on port: 36821
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.02 seconds; current allocated memory: 873.680 MB.
+INFO: [HLS 200-10] Analyzing design file 'matrix_multiply.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.48 seconds. CPU system time: 0.35 seconds. Elapsed time: 1.83 seconds; current allocated memory: 875.594 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-241] Aggregating bram variable 'C' with compact=bit mode in 16-bits (matrix_multiply.cpp:14:0)
+INFO: [HLS 214-241] Aggregating bram variable 'B' with compact=bit mode in 16-bits (matrix_multiply.cpp:14:0)
+INFO: [HLS 214-241] Aggregating bram variable 'A' with compact=bit mode in 16-bits (matrix_multiply.cpp:14:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.85 seconds. CPU system time: 0.33 seconds. Elapsed time: 2.19 seconds; current allocated memory: 875.793 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 875.793 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 878.043 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 881.648 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_16_2' (matrix_multiply.cpp:17) in function 'matrix_multiply_basic' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_16_2' (matrix_multiply.cpp:17) in function 'matrix_multiply_basic' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_18_3' (matrix_multiply.cpp:17) in function 'matrix_multiply_basic' completely with a factor of 8.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrix_multiply_basic' (matrix_multiply.cpp:10:26)...7 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 906.652 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_15_1' (matrix_multiply.cpp:15:31) in function 'matrix_multiply_basic'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 905.527 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_multiply_basic' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_15_1_VITIS_LOOP_16_2'.
+WARNING: [HLS 200-885] The II Violation in module 'matrix_multiply_basic' (loop 'VITIS_LOOP_15_1_VITIS_LOOP_16_2'): Unable to schedule 'load' operation ('A_load_2', matrix_multiply.cpp:15) on array 'A' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'A'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'matrix_multiply_basic' (loop 'VITIS_LOOP_15_1_VITIS_LOOP_16_2'): Unable to schedule 'load' operation ('A_load_6', matrix_multiply.cpp:15) on array 'A' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'A'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'matrix_multiply_basic' (loop 'VITIS_LOOP_15_1_VITIS_LOOP_16_2'): Unable to schedule 'load' operation ('A_load_3', matrix_multiply.cpp:15) on array 'A' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'A'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 10, loop 'VITIS_LOOP_15_1_VITIS_LOOP_16_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.07 seconds; current allocated memory: 905.527 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 905.527 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_basic/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_basic/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_basic/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_multiply_basic' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrix_multiply_basic' pipeline 'VITIS_LOOP_15_1_VITIS_LOOP_16_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_16ns_16_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16s_16s_16_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_basic'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 905.527 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 906.301 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 909.238 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_multiply_basic.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_multiply_basic.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 292.23 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.88 seconds. CPU system time: 0.74 seconds. Elapsed time: 4.63 seconds; current allocated memory: 35.633 MB.
+INFO: [HLS 200-1510] Running: close_project 
+开始综合partition版本...
+INFO: [HLS 200-1510] Running: open_project matrix_prj_partition 
+INFO: [HLS 200-10] Creating and opening project '/home/fyt/A/teach_bili/syntax_tutorial/lesson2_array_opt/matrix_prj_partition'.
+INFO: [HLS 200-1510] Running: set_top matrix_multiply_partition 
+INFO: [HLS 200-1510] Running: add_files matrix_multiply.cpp 
+INFO: [HLS 200-10] Adding design file 'matrix_multiply.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/home/fyt/A/teach_bili/syntax_tutorial/lesson2_array_opt/matrix_prj_partition/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xczu9eg-ffvb1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 909.312 MB.
+INFO: [HLS 200-10] Analyzing design file 'matrix_multiply.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.41 seconds. CPU system time: 0.36 seconds. Elapsed time: 1.79 seconds; current allocated memory: 909.312 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_41_3' is marked as complete unroll implied by the pipeline pragma (matrix_multiply.cpp:41:30)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_41_3' (matrix_multiply.cpp:41:30) in function 'matrix_multiply_partition' completely with a factor of 8 (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Complete partitioning on dimension 2. (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Complete partitioning on dimension 1. (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'C' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'B_7' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'B_6' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'B_5' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'B_4' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'B_3' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'B_2' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'B_1' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'B_0' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'A_7' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'A_6' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'A_5' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'A_4' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'A_3' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'A_2' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'A_1' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 214-241] Aggregating bram variable 'A_0' with compact=bit mode in 16-bits (matrix_multiply.cpp:31:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.11 seconds. CPU system time: 0.33 seconds. Elapsed time: 2.55 seconds; current allocated memory: 909.312 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 909.312 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 909.312 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 909.312 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrix_multiply_partition' (matrix_multiply.cpp:27:26)...7 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 927.793 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_37_1' (matrix_multiply.cpp:37:28) in function 'matrix_multiply_partition'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 927.793 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_multiply_partition' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_partition' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=sum_V) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_37_1_VITIS_LOOP_38_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'VITIS_LOOP_37_1_VITIS_LOOP_38_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 927.793 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 927.793 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_partition' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/A_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/A_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/A_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/A_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/A_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/A_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/A_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/A_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/B_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/B_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/B_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/B_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/B_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/B_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/B_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/B_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_partition/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_multiply_partition' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrix_multiply_partition' pipeline 'VITIS_LOOP_37_1_VITIS_LOOP_38_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_16ns_16_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16s_16s_16_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_partition'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 927.793 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 927.793 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 927.793 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_multiply_partition.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_multiply_partition.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 292.23 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4.15 seconds. CPU system time: 0.74 seconds. Elapsed time: 5.02 seconds; current allocated memory: 18.480 MB.
+INFO: [HLS 200-1510] Running: close_project 
+开始综合cyclic版本...
+INFO: [HLS 200-1510] Running: open_project matrix_prj_cyclic 
+INFO: [HLS 200-10] Creating and opening project '/home/fyt/A/teach_bili/syntax_tutorial/lesson2_array_opt/matrix_prj_cyclic'.
+INFO: [HLS 200-1510] Running: set_top matrix_multiply_cyclic 
+INFO: [HLS 200-1510] Running: add_files matrix_multiply.cpp 
+INFO: [HLS 200-10] Adding design file 'matrix_multiply.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/home/fyt/A/teach_bili/syntax_tutorial/lesson2_array_opt/matrix_prj_cyclic/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xczu9eg-ffvb1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 927.793 MB.
+INFO: [HLS 200-10] Analyzing design file 'matrix_multiply.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.39 seconds. CPU system time: 0.31 seconds. Elapsed time: 1.71 seconds; current allocated memory: 927.793 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_64_3' is marked as complete unroll implied by the pipeline pragma (matrix_multiply.cpp:64:30)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_64_3' (matrix_multiply.cpp:64:30) in function 'matrix_multiply_cyclic' completely with a factor of 8 (matrix_multiply.cpp:54:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Cyclic partitioning with factor 2 on dimension 2. (matrix_multiply.cpp:54:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Cyclic partitioning with factor 2 on dimension 1. (matrix_multiply.cpp:54:0)
+INFO: [HLS 214-241] Aggregating bram variable 'C' with compact=bit mode in 16-bits (matrix_multiply.cpp:54:0)
+INFO: [HLS 214-241] Aggregating bram variable 'B_1' with compact=bit mode in 16-bits (matrix_multiply.cpp:54:0)
+INFO: [HLS 214-241] Aggregating bram variable 'B_0' with compact=bit mode in 16-bits (matrix_multiply.cpp:54:0)
+INFO: [HLS 214-241] Aggregating bram variable 'A_1' with compact=bit mode in 16-bits (matrix_multiply.cpp:54:0)
+INFO: [HLS 214-241] Aggregating bram variable 'A_0' with compact=bit mode in 16-bits (matrix_multiply.cpp:54:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.09 seconds. CPU system time: 0.33 seconds. Elapsed time: 2.42 seconds; current allocated memory: 927.793 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 927.793 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 927.793 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 927.793 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrix_multiply_cyclic' (matrix_multiply.cpp:50:26)...7 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 944.738 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_60_1' (matrix_multiply.cpp:60:28) in function 'matrix_multiply_cyclic'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 944.738 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_multiply_cyclic' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_cyclic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=sum_V) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_60_1_VITIS_LOOP_61_2'.
+WARNING: [HLS 200-885] The II Violation in module 'matrix_multiply_cyclic' (loop 'VITIS_LOOP_60_1_VITIS_LOOP_61_2'): Unable to schedule 'load' operation ('A_0_load_2', matrix_multiply.cpp:60) on array 'A_0' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'A_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 7, loop 'VITIS_LOOP_60_1_VITIS_LOOP_61_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.05 seconds; current allocated memory: 944.738 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 944.738 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_cyclic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_cyclic/A_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_cyclic/A_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_cyclic/B_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_cyclic/B_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_cyclic/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_multiply_cyclic' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrix_multiply_cyclic' pipeline 'VITIS_LOOP_60_1_VITIS_LOOP_61_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_16ns_16_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16s_16s_16_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_cyclic'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 944.738 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 944.738 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 944.738 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_multiply_cyclic.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_multiply_cyclic.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 292.23 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.97 seconds. CPU system time: 0.67 seconds. Elapsed time: 4.66 seconds; current allocated memory: 16.945 MB.
+INFO: [HLS 200-1510] Running: close_project 
+开始综合reshape版本...
+INFO: [HLS 200-1510] Running: open_project matrix_prj_reshape 
+INFO: [HLS 200-10] Creating and opening project '/home/fyt/A/teach_bili/syntax_tutorial/lesson2_array_opt/matrix_prj_reshape'.
+INFO: [HLS 200-1510] Running: set_top matrix_multiply_reshape 
+INFO: [HLS 200-1510] Running: add_files matrix_multiply.cpp 
+INFO: [HLS 200-10] Adding design file 'matrix_multiply.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/home/fyt/A/teach_bili/syntax_tutorial/lesson2_array_opt/matrix_prj_reshape/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xczu9eg-ffvb1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 944.738 MB.
+INFO: [HLS 200-10] Analyzing design file 'matrix_multiply.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.34 seconds. CPU system time: 0.33 seconds. Elapsed time: 1.68 seconds; current allocated memory: 944.738 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_87_3' is marked as complete unroll implied by the pipeline pragma (matrix_multiply.cpp:87:30)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_87_3' (matrix_multiply.cpp:87:30) in function 'matrix_multiply_reshape' completely with a factor of 8 (matrix_multiply.cpp:77:0)
+INFO: [HLS 214-241] Aggregating bram variable 'C' with compact=bit mode in 16-bits (matrix_multiply.cpp:77:0)
+INFO: [HLS 214-241] Aggregating bram variable 'A' with compact=bit mode in 16-bits (matrix_multiply.cpp:77:0)
+INFO: [HLS 214-241] Aggregating bram variable 'B' with compact=bit mode in 16-bits (matrix_multiply.cpp:77:0)
+INFO: [HLS 214-248] Applying array_reshape to 'A': Complete reshaping on dimension 2. (matrix_multiply.cpp:77:0)
+INFO: [HLS 214-248] Applying array_reshape to 'B': Complete reshaping on dimension 1. (matrix_multiply.cpp:77:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.03 seconds. CPU system time: 0.34 seconds. Elapsed time: 2.38 seconds; current allocated memory: 944.738 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 944.738 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 944.738 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 944.738 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrix_multiply_reshape' (matrix_multiply.cpp:83:26)...7 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 960.250 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_83_1' (matrix_multiply.cpp:83:28) in function 'matrix_multiply_reshape'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 960.250 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_multiply_reshape' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply_reshape' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=sum_V) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_83_1_VITIS_LOOP_84_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'VITIS_LOOP_83_1_VITIS_LOOP_84_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.07 seconds; current allocated memory: 960.250 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 960.250 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply_reshape' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_reshape/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_reshape/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply_reshape/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_multiply_reshape' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrix_multiply_reshape' pipeline 'VITIS_LOOP_83_1_VITIS_LOOP_84_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_16ns_16_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16s_16s_16_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply_reshape'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 960.250 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 960.250 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 960.250 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_multiply_reshape.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_multiply_reshape.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 292.23 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.96 seconds. CPU system time: 0.7 seconds. Elapsed time: 4.68 seconds; current allocated memory: 15.512 MB.
+INFO: [HLS 200-1510] Running: close_project 
+所有版本综合完成！
+INFO: [HLS 200-112] Total CPU user time: 17.6 seconds. Total CPU system time: 3.17 seconds. Total elapsed time: 30.89 seconds; peak allocated memory: 960.250 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Sep 29 05:38:15 2025...

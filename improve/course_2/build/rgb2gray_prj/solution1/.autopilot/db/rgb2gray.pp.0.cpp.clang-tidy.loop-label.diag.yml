@@ -1,0 +1,58 @@
+---
+MainSourceFile:  /home/fyt/A/teach_bili/improve/course_2/build/rgb2gray_prj/solution1/.autopilot/db/rgb2gray.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1211_1:  '
+    FileOffset:      1211
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h
+    Replacements:    
+      - FilePath:        /home/fyt/A/teach_bili/improve/course_2/build/rgb2gray_prj/solution1/.autopilot/db/rgb2gray.pp.0.cpp
+        Offset:          51763
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1211_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/fyt/A/teach_bili/improve/course_2/build/rgb2gray_prj/solution1/.autopilot/db/rgb2gray.pp.0.cpp
+        Offset:          258807
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/fyt/A/teach_bili/improve/course_2/build/rgb2gray_prj/solution1/.autopilot/db/rgb2gray.pp.0.cpp
+        Offset:          259246
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/fyt/A/teach_bili/improve/course_2/build/rgb2gray_prj/solution1/.autopilot/db/rgb2gray.pp.0.cpp
+        Offset:          259686
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1245_1:  '
+    FileOffset:      1245
+    FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/fyt/A/teach_bili/improve/course_2/build/rgb2gray_prj/solution1/.autopilot/db/rgb2gray.pp.0.cpp
+        Offset:          521446
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1245_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_10_1:  '
+    FileOffset:      10
+    FilePath:        /home/fyt/A/teach_bili/improve/course_2/code/rgb2gray.cpp
+    Replacements:    
+      - FilePath:        /home/fyt/A/teach_bili/improve/course_2/build/rgb2gray_prj/solution1/.autopilot/db/rgb2gray.pp.0.cpp
+        Offset:          865363
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_10_1: '
+...

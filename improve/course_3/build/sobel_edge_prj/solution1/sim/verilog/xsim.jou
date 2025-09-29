@@ -2,13 +2,13 @@
 # xsim v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Sun Jun  1 08:41:30 2025
-# Process ID: 1733915
-# Current directory: /home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog
+# Start of session at: Sat Aug  9 02:09:14 2025
+# Process ID: 722054
+# Current directory: /home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog
 # Command line: xsim -mode tcl -source {xsim.dir/sobel_edge/xsim_script.tcl}
-# Log file: /home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/xsim.log
-# Journal file: /home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/xsim.jou
-# Running On: fpgaserver-9950x, OS: Linux, CPU Frequency: 3000.000 MHz, CPU Physical cores: 32, Host memory: 132526 MB
+# Log file: /home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/xsim.log
+# Journal file: /home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/xsim.jou
+# Running On: fpgaserver-9950x, OS: Linux, CPU Frequency: 4300.000 MHz, CPU Physical cores: 32, Host memory: 132526 MB
 #-----------------------------------------------------------
 source xsim.dir/sobel_edge/xsim_script.tcl
 source sobel_edge.tcl

@@ -1,0 +1,40 @@
+In file included from ../code/rgb2gray.cpp:1:
+In file included from ../code/rgb2gray.h:4:
+In file included from /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int.h:12:
+/opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=and_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:692:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=or_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:706:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xor_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/home/fyt/A/teach_bili/improve/course_2/build/run_hls.tcl:53:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=rgb2gray_XLX_SEP_ PragmaOptions=name=rgb2gray_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=rgb2gray
+        ^
+../code/rgb2gray.cpp:4:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=rgb2gray_XLX_SEP_ PragmaOptions=m_axi port=rgb offset=slave bundle=gmem0 depth=4096_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=rgb offset=slave bundle=gmem0 depth=4096
+        ^
+../code/rgb2gray.cpp:5:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=rgb2gray_XLX_SEP_ PragmaOptions=m_axi port=gray offset=slave bundle=gmem1 depth=4096_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=gray offset=slave bundle=gmem1 depth=4096
+        ^
+../code/rgb2gray.cpp:6:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=rgb2gray_XLX_SEP_ PragmaOptions=s_axilite port=rgb bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=rgb bundle=control
+        ^
+../code/rgb2gray.cpp:7:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=rgb2gray_XLX_SEP_ PragmaOptions=s_axilite port=gray bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=gray bundle=control
+        ^
+../code/rgb2gray.cpp:8:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=rgb2gray_XLX_SEP_ PragmaOptions=s_axilite port=size bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=size bundle=control
+        ^
+../code/rgb2gray.cpp:9:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=rgb2gray_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+        ^
+../code/rgb2gray.cpp:11:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=rgb2gray_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+../code/rgb2gray.cpp:12:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=rgb2gray_XLX_SEP_ PragmaOptions=min=1 max=250_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=250
+        ^
+12 warnings generated.

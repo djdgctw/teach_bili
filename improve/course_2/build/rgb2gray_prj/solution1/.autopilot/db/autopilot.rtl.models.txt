@@ -1,0 +1,9 @@
+rgb2gray_mul_41ns_43ns_56_5_1
+rgb2gray_mac_muladd_8ns_6ns_40ns_41_4_1
+rgb2gray_mac_muladd_8ns_4ns_41ns_41_4_1
+rgb2gray_flow_control_loop_pipe_sequential_init
+rgb2gray_gmem0_m_axi
+rgb2gray_gmem1_m_axi
+rgb2gray_control_s_axi
+rgb2gray_Pipeline_VITIS_LOOP_10_1
+rgb2gray

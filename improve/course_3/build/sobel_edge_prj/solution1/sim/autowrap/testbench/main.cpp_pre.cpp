@@ -1,10 +1,10 @@
-# 1 "/home/fyt/teach_bili/course_3/code/main.cpp"
+# 1 "/home/fyt/A/teach_bili/improve/course_3/code/main.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/home/fyt/teach_bili/course_3/code/main.cpp"
-# 1 "/home/fyt/teach_bili/course_3/code/sobel_edge.h" 1
+# 1 "/home/fyt/A/teach_bili/improve/course_3/code/main.cpp"
+# 1 "/home/fyt/A/teach_bili/improve/course_3/code/sobel_edge.h" 1
 
 
 
@@ -61599,10 +61599,10 @@ inline bool operator!=(
 }
 # 366 "/opt/Xilinx/Vitis_HLS/2022.2/include/ap_fixed.h" 2
 # 361 "/opt/Xilinx/Vitis_HLS/2022.2/include/ap_int.h" 2
-# 5 "/home/fyt/teach_bili/course_3/code/sobel_edge.h" 2
+# 5 "/home/fyt/A/teach_bili/improve/course_3/code/sobel_edge.h" 2
 
 void sobel_edge(const ap_uint<8> *input, ap_uint<8> *output, int rows, int cols);
-# 2 "/home/fyt/teach_bili/course_3/code/main.cpp" 2
+# 2 "/home/fyt/A/teach_bili/improve/course_3/code/main.cpp" 2
 # 1 "/home/fyt/.conda/envs/opencv_env/include/opencv4/opencv2/opencv.hpp" 1
 # 48 "/home/fyt/.conda/envs/opencv_env/include/opencv4/opencv2/opencv.hpp"
 # 1 "/home/fyt/.conda/envs/opencv_env/include/opencv4/opencv2/opencv_modules.hpp" 1
@@ -135505,7 +135505,7 @@ public:
 }
 # 58 "/home/fyt/.conda/envs/opencv_env/include/opencv4/opencv2/video.hpp" 2
 # 90 "/home/fyt/.conda/envs/opencv_env/include/opencv4/opencv2/opencv.hpp" 2
-# 3 "/home/fyt/teach_bili/course_3/code/main.cpp" 2
+# 3 "/home/fyt/A/teach_bili/improve/course_3/code/main.cpp" 2
 
 
 
@@ -135520,10 +135520,10 @@ int main() {
     std::stringstream timestamp;
     timestamp << std::put_time(std::localtime(&time_t), "%H%M%S") << "_" << std::setfill('0') << std::setw(3) << ms.count();
 
-    std::string output_filename = "/home/fyt/teach_bili/course_3/images/sobel_edge_output_" + timestamp.str() + ".png";
+    std::string output_filename = "/home/fyt/A/teach_bili/improve/course_3/images/sobel_edge_output_" + timestamp.str() + ".png";
 
 
-    cv::Mat img = cv::imread("/home/fyt/teach_bili/course_3/images/test_input.png", cv::IMREAD_GRAYSCALE);
+    cv::Mat img = cv::imread("/home/fyt/A/teach_bili/improve/course_3/images/test_input.png", cv::IMREAD_GRAYSCALE);
     if (img.empty()) {
         std::cerr << "Error: Could not load test_input.png from images directory" << std::endl;
         return -1;

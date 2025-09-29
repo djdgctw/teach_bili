@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c {../../../code/sobel_edge.h ../../../code/sobel_edge.cpp}}
 set SourceFlags {sc {} c {{ } {} { } {}}}
-set DirectiveFile /home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/solution1.directive
+set DirectiveFile /home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/solution1.directive
 set TBFiles {verilog ../../../code/main.cpp bc ../../../code/main.cpp sc ../../../code/main.cpp vhdl ../../../code/main.cpp c {} cas ../../../code/main.cpp}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

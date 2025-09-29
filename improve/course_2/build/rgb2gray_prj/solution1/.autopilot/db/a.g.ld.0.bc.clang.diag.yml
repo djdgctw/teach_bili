@@ -1,0 +1,206 @@
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../code/rgb2gray.cpp, Line: 10, Column: 19 }
+Function:        _Z8rgb2grayPK7ap_uintILi24EEPS_ILi8EEi
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.load.8
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        rgbseq
+  - String:          ' '
+  - ArrayName:       rgb
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_10_1
+  - String:          ' '
+  - LoopLoc:         '../code/rgb2gray.cpp:10:19'
+  - String:          ' '
+  - Function:        'rgb2gray(ap_uint<24> const*, ap_uint<8>*, int)'
+    DebugLoc:        { File: ../code/rgb2gray.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../code/rgb2gray.cpp, Line: 10, Column: 19 }
+Function:        _Z8rgb2grayPK7ap_uintILi24EEPS_ILi8EEi
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.store.64
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        grayseq
+  - String:          ' '
+  - ArrayName:       gray
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_10_1
+  - String:          ' '
+  - LoopLoc:         '../code/rgb2gray.cpp:10:19'
+  - String:          ' '
+  - Function:        'rgb2gray(ap_uint<24> const*, ap_uint<8>*, int)'
+    DebugLoc:        { File: ../code/rgb2gray.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            TypeAllocSizePaddingMemoryAccess
+DebugLoc:        { File: ../code/rgb2gray.cpp, Line: 10, Column: 19 }
+Function:        _Z8rgb2grayPK7ap_uintILi24EEPS_ILi8EEi
+Args:            
+  - Type:            i24
+  - String:          ' allocated space contains padding. This is unsupported'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        rgbseq
+  - String:          ' '
+  - ArrayName:       rgb
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'rgb2gray(ap_uint<24> const*, ap_uint<8>*, int)'
+    DebugLoc:        { File: ../code/rgb2gray.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../code/rgb2gray.cpp, Line: 10, Column: 19 }
+Function:        _Z8rgb2grayPK7ap_uintILi24EEPS_ILi8EEi
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        grayseq
+  - String:          ' '
+  - ArrayName:       gray
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_10_1
+  - String:          ' '
+  - LoopLoc:         '../code/rgb2gray.cpp:10:19'
+  - String:          ' '
+  - Function:        'rgb2gray(ap_uint<24> const*, ap_uint<8>*, int)'
+    DebugLoc:        { File: ../code/rgb2gray.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../code/rgb2gray.cpp, Line: 10, Column: 19 }
+Function:        _Z8rgb2grayPK7ap_uintILi24EEPS_ILi8EEi
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_10_1
+  - String:          ' '
+  - LoopLoc:         '../code/rgb2gray.cpp:10:19'
+  - String:          ' '
+  - Function:        'rgb2gray(ap_uint<24> const*, ap_uint<8>*, int)'
+    DebugLoc:        { File: ../code/rgb2gray.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../code/rgb2gray.cpp, Line: 10, Column: 19 }
+Function:        _Z8rgb2grayPK7ap_uintILi24EEPS_ILi8EEi
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_10_1
+  - String:          '''('
+  - LoopLoc:         '../code/rgb2gray.cpp:10:19'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../code/rgb2gray.cpp, Line: 10, Column: 19 }
+Function:        _Z8rgb2grayPK7ap_uintILi24EEPS_ILi8EEi
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_10_1
+  - String:          ' '
+  - LoopLoc:         '../code/rgb2gray.cpp:10:19'
+  - String:          ' '
+  - Function:        'rgb2gray(ap_uint<24> const*, ap_uint<8>*, int)'
+    DebugLoc:        { File: ../code/rgb2gray.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../code/rgb2gray.cpp, Line: 10, Column: 19 }
+Function:        _Z8rgb2grayPK7ap_uintILi24EEPS_ILi8EEi
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_10_1
+  - String:          '''('
+  - LoopLoc:         '../code/rgb2gray.cpp:10:19'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

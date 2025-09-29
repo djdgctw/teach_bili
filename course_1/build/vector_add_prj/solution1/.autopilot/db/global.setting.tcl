@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c {../../../code/vector_add.h ../../../code/vector_add.cpp}}
 set SourceFlags {sc {} c {{ } {} { } {}}}
-set DirectiveFile /home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/solution1.directive
+set DirectiveFile /home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/solution1.directive
 set TBFiles {verilog ../../../code/main.cpp bc ../../../code/main.cpp sc ../../../code/main.cpp vhdl ../../../code/main.cpp c {} cas ../../../code/main.cpp}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

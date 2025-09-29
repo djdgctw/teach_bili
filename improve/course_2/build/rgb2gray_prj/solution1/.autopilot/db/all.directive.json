@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "rgb2gray",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/fyt\/A\/teach_bili\/improve\/course_2\/build\/run_hls.tcl",
+          "sourceLine": "53",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "rgb2gray"
+              }]
+          }
+        }]
+    }]}

@@ -1,12 +1,12 @@
 ---
-MainSourceFile:  /home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp
+MainSourceFile:  /home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp
 Diagnostics:     
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_1211_1:  '
     FileOffset:      1211
     FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h
     Replacements:    
-      - FilePath:        /home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp
+      - FilePath:        /home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp
         Offset:          51769
         Length:          0
         ReplacementText: 'VITIS_LOOP_1211_1: '
@@ -15,7 +15,7 @@ Diagnostics:
     FileOffset:      676
     FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
     Replacements:    
-      - FilePath:        /home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp
+      - FilePath:        /home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp
         Offset:          258813
         Length:          0
         ReplacementText: 'VITIS_LOOP_676_1: '
@@ -24,7 +24,7 @@ Diagnostics:
     FileOffset:      690
     FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
     Replacements:    
-      - FilePath:        /home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp
+      - FilePath:        /home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp
         Offset:          259252
         Length:          0
         ReplacementText: 'VITIS_LOOP_690_1: '
@@ -33,7 +33,7 @@ Diagnostics:
     FileOffset:      704
     FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
     Replacements:    
-      - FilePath:        /home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp
+      - FilePath:        /home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp
         Offset:          259692
         Length:          0
         ReplacementText: 'VITIS_LOOP_704_1: '
@@ -42,17 +42,17 @@ Diagnostics:
     FileOffset:      1245
     FilePath:        /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h
     Replacements:    
-      - FilePath:        /home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp
+      - FilePath:        /home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp
         Offset:          521452
         Length:          0
         ReplacementText: 'VITIS_LOOP_1245_1: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_13_1:  '
     FileOffset:      13
-    FilePath:        /home/fyt/teach_bili/course_1/code/vector_add.cpp
+    FilePath:        /home/fyt/A/teach_bili/course_1/code/vector_add.cpp
     Replacements:    
-      - FilePath:        /home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp
-        Offset:          865420
+      - FilePath:        /home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp
+        Offset:          865422
         Length:          0
         ReplacementText: 'VITIS_LOOP_13_1: '
 ...

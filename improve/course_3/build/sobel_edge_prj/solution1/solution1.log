@@ -14,11 +14,11 @@ INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.6 seconds. CPU system time: 0.23 seconds. Elapsed time: 1.65 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.62 seconds. CPU system time: 0.25 seconds. Elapsed time: 1.69 seconds; current allocated memory: 0.000 MB.
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 873.789 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 873.883 MB.
 INFO: [HLS 200-10] Analyzing design file '../code/sobel_edge.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.1 seconds. CPU system time: 0.28 seconds. Elapsed time: 1.37 seconds; current allocated memory: 876.023 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.04 seconds. CPU system time: 0.29 seconds. Elapsed time: 1.33 seconds; current allocated memory: 876.145 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 214-291] Loop 'VITIS_LOOP_22_3' is marked as complete unroll implied by the pipeline pragma (../code/sobel_edge.cpp:22:30)
 INFO: [HLS 214-291] Loop 'VITIS_LOOP_23_4' is marked as complete unroll implied by the pipeline pragma (../code/sobel_edge.cpp:23:34)
@@ -26,18 +26,18 @@ INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_22_3' (../code/sobel_edge.cpp:22:
 INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_23_4' (../code/sobel_edge.cpp:23:34) in function 'sobel_edge' completely with a factor of 3 (../code/sobel_edge.cpp:3:0)
 INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 8 in loop 'VITIS_LOOP_17_2'(../code/sobel_edge.cpp:17:26) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../code/sobel_edge.cpp:17:26)
 INFO: [HLS 214-115] Multiple burst reads of length 3 and bit width 8 has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../code/sobel_edge.cpp:24:40)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.57 seconds. CPU system time: 0.25 seconds. Elapsed time: 1.83 seconds; current allocated memory: 876.816 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 876.816 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.46 seconds. CPU system time: 0.26 seconds. Elapsed time: 1.72 seconds; current allocated memory: 876.844 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 876.844 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 881.707 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 881.719 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 887.473 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 887.484 MB.
 INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_37_5' (../code/sobel_edge.cpp:37) in function 'sobel_edge' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_41_6' (../code/sobel_edge.cpp:41) in function 'sobel_edge' automatically.
 INFO: [XFORM 203-11] Balancing expressions in function 'sobel_edge' (../code/sobel_edge.cpp:3:1)...12 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 915.473 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 915.496 MB.
 WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_16_1' (../code/sobel_edge.cpp:16:31) in function 'sobel_edge' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 939.219 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 939.258 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'sobel_edge' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -52,13 +52,13 @@ WARNING: [HLS 200-885] The II Violation in module 'sobel_edge_Pipeline_VITIS_LOO
 WARNING: [HLS 200-885] The II Violation in module 'sobel_edge_Pipeline_VITIS_LOOP_17_2' (loop 'VITIS_LOOP_17_2'): Unable to schedule bus read operation ('pixel.V', ../code/sobel_edge.cpp:24) on port 'gmem0' (../code/sobel_edge.cpp:24) due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 20, loop 'VITIS_LOOP_17_2'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 939.562 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 939.691 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 939.562 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 939.691 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'sobel_edge_Pipeline_VITIS_LOOP_37_5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -67,13 +67,13 @@ INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_37_5'.
 WARNING: [HLS 200-885] The II Violation in module 'sobel_edge_Pipeline_VITIS_LOOP_37_5' (loop 'VITIS_LOOP_37_5'): Unable to schedule bus request operation ('gmem1_addr_2_req', ../code/sobel_edge.cpp:39) on port 'gmem1' (../code/sobel_edge.cpp:39) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 10, loop 'VITIS_LOOP_37_5'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 939.695 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 939.738 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 939.695 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 939.738 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'sobel_edge_Pipeline_VITIS_LOOP_41_6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -82,25 +82,25 @@ INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_41_6'.
 WARNING: [HLS 200-885] The II Violation in module 'sobel_edge_Pipeline_VITIS_LOOP_41_6' (loop 'VITIS_LOOP_41_6'): Unable to schedule bus request operation ('gmem1_addr_4_req', ../code/sobel_edge.cpp:43) on port 'gmem1' (../code/sobel_edge.cpp:43) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 9, loop 'VITIS_LOOP_41_6'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 940.008 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 940.129 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 940.008 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 940.129 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'sobel_edge' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 940.484 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 940.559 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 940.484 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 940.559 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'sobel_edge_Pipeline_VITIS_LOOP_17_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -119,19 +119,19 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LO
 WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_AWUSER' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'sobel_edge_Pipeline_VITIS_LOOP_17_2/m_axi_gmem1_BREADY' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sobel_edge_Pipeline_VITIS_LOOP_17_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 940.953 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 941.004 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'sobel_edge_Pipeline_VITIS_LOOP_37_5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sobel_edge_Pipeline_VITIS_LOOP_37_5' pipeline 'VITIS_LOOP_37_5' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sobel_edge_Pipeline_VITIS_LOOP_37_5'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 943.289 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 943.367 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'sobel_edge_Pipeline_VITIS_LOOP_41_6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sobel_edge_Pipeline_VITIS_LOOP_41_6' pipeline 'VITIS_LOOP_41_6' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sobel_edge_Pipeline_VITIS_LOOP_41_6'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 944.559 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 944.609 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'sobel_edge' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -147,5 +147,5 @@ INFO: [RTGEN 206-100] Bundling port 'input_r', 'output_r', 'rows', 'cols' to AXI
 INFO: [RTGEN 206-100] Generating core module 'mul_31ns_32s_63_2_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sobel_edge'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 947.215 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 951.203 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 947.297 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 951.316 MB.

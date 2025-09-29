@@ -11,5 +11,5 @@
 	<Message severity="INFO" prefix="[COSIM 212-316]" key="COSIM_TCL_316_1188" tag="" content="Starting C post checking ..." resolution=""/>
 	<Message severity="INFO" prefix="[COSIM 212-1000]" key="COSIM_TCL_1000_1070" tag="" content="*** C/RTL co-simulation finished: PASS ***" resolution=""/>
 	<Message severity="INFO" prefix="[COSIM 212-211]" key="COSIM_TCL_211_1174" tag="" content="II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command cosim_design CPU user time: 14.44 seconds. CPU system time: 1.32 seconds. Elapsed time: 12.05 seconds; current allocated memory: 22.305 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command cosim_design CPU user time: 14.12 seconds. CPU system time: 1.51 seconds. Elapsed time: 12.03 seconds; current allocated memory: 22.355 MB." resolution=""/>
 </Messages>

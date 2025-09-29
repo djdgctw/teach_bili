@@ -1,0 +1,4 @@
+
+/opt/Xilinx/Vivado/2022.2/bin/xelab xil_defaultlib.apatb_vector_add_top glbl -Oenable_linking_all_libraries  -prj vector_add.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib "ieee_proposed=./ieee_proposed" -s vector_add 
+/opt/Xilinx/Vivado/2022.2/bin/xsim --noieeewarnings vector_add -tclbatch vector_add.tcl 
+

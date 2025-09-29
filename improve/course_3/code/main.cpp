@@ -14,10 +14,10 @@ int main() {
     std::stringstream timestamp;
     timestamp << std::put_time(std::localtime(&time_t), "%H%M%S") << "_" << std::setfill('0') << std::setw(3) << ms.count();
     
-    std::string output_filename = "/home/fyt/teach_bili/improve/course_3/images/sobel_edge_output_" + timestamp.str() + ".png";
+    std::string output_filename = "/home/fyt/A/teach_bili/improve/course_3/images/sobel_edge_output_" + timestamp.str() + ".png";
     
     // 读取测试图片并转换为灰度图
-    cv::Mat img = cv::imread("/home/fyt/teach_bili/improve/course_3/images/ceshi_small.png", cv::IMREAD_GRAYSCALE);
+    cv::Mat img = cv::imread("/home/fyt/A/teach_bili/improve/course_3/images/test_input.png", cv::IMREAD_GRAYSCALE);
     if (img.empty()) {
         std::cerr << "Error: Could not load test_input.png from images directory" << std::endl;
         return -1;

@@ -1,6 +1,6 @@
 <dict>
   <key>main-file</key>
-  <string>/home/fyt/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp</string>
+  <string>/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/.autopilot/db/vector_add.pp.0.cpp</string>
   <key>diagnostics</key>
   <array>
     <dict>
@@ -55,7 +55,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>/home/fyt/teach_bili/course_1/build/run_hls.tcl</string>
+      <string>/home/fyt/A/teach_bili/course_1/build/run_hls.tcl</string>
       <key>line</key>
       <integer>51</integer>
       <key>column</key>

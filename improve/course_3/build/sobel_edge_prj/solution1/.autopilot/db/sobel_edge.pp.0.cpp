@@ -5714,7 +5714,7 @@ __attribute__((sdx_kernel("sobel_edge", 0))) void sobel_edge(const ap_uint<8> *i
 # 2 "../code/sobel_edge.cpp" 2
 
 __attribute__((sdx_kernel("sobel_edge", 0))) void sobel_edge(const ap_uint<8> *input, ap_uint<8> *output, int rows, int cols) {
-#line 53 "/home/fyt/teach_bili/course_3/build/run_hls.tcl"
+#line 53 "/home/fyt/A/teach_bili/improve/course_3/build/run_hls.tcl"
 #pragma HLSDIRECTIVE TOP name=sobel_edge
 # 3 "../code/sobel_edge.cpp"
 

@@ -1,4 +1,4 @@
-<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="vector_add_prj" top="vector_add" ideType="classic">
+<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" name="vector_add_prj" top="vector_add">
     <Simulation argv="">
         <SimFlow name="csim" setup="false" optimizeCompile="false" clean="false" ldflags="-L/home/fyt/.conda/envs/opencv_env/lib -Wl,-rpath,/home/fyt/.conda/envs/opencv_env/lib -lopencv_core -lopencv_imgproc -lopencv_imgcodecs" mflags=""/>
     </Simulation>

@@ -6,14 +6,14 @@
 
 source /opt/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'fyt' on host 'fpgaserver-9950x' (Linux_x86_64 version 5.15.0-130-generic) on Sun Jun 01 09:32:40 UTC 2025
+INFO: [HLS 200-10] For user 'fyt' on host 'fpgaserver-9950x' (Linux_x86_64 version 5.15.0-151-generic) on Sun Aug 24 03:41:31 UTC 2025
 INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
-INFO: [HLS 200-10] In directory '/home/fyt/teach_bili/course_1/build'
+INFO: [HLS 200-10] In directory '/home/fyt/A/teach_bili/course_1/build'
 Sourcing Tcl script 'run_hls.tcl'
 INFO: [HLS 200-1510] Running: source run_hls.tcl
-successful!!!  the start time is Sun Jun 01 09:32:40 UTC 2025
+successful!!!  the start time is Sun Aug 24 03:41:31 UTC 2025
 INFO: [HLS 200-1510] Running: open_project vector_add_prj 
-INFO: [HLS 200-10] Opening project '/home/fyt/teach_bili/course_1/build/vector_add_prj'.
+INFO: [HLS 200-10] Opening project '/home/fyt/A/teach_bili/course_1/build/vector_add_prj'.
 INFO: [HLS 200-1510] Running: set_top vector_add 
 INFO: [HLS 200-1510] Running: add_files ../code/vector_add.cpp 
 INFO: [HLS 200-10] Adding design file '../code/vector_add.cpp' to the project
@@ -22,7 +22,7 @@ INFO: [HLS 200-10] Adding design file '../code/vector_add.h' to the project
 INFO: [HLS 200-1510] Running: add_files -tb ../code/main.cpp -cflags -I/home/fyt/.conda/envs/opencv_env/include/opencv4 -std=c++14 -csimflags -L/home/fyt/.conda/envs/opencv_env/lib -Wl,-rpath,/home/fyt/.conda/envs/opencv_env/lib -lopencv_core -lopencv_imgproc -lopencv_imgcodecs 
 INFO: [HLS 200-10] Adding test bench file '../code/main.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution -reset solution1 
-INFO: [HLS 200-10] Opening and resetting solution '/home/fyt/teach_bili/course_1/build/vector_add_prj/solution1'.
+INFO: [HLS 200-10] Opening and resetting solution '/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1'.
 INFO: [HLS 200-10] Cleaning up the solution database.
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
@@ -35,7 +35,7 @@ INFO: [HLS 200-1510] Running: csim_design -ldflags -L/home/fyt/.conda/envs/openc
 /bin/bash: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/bash)
 /bin/bash: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/bash)
 /bin/bash: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/bash)
-Running Dispatch Server on port: 37275
+Running Dispatch Server on port: 36267
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
    Compiling ../../../../../code/main.cpp in debug mode
@@ -53,27 +53,27 @@ INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 /bin/sh: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/sh)
 /bin/sh: /home/fyt/.conda/envs/opencv_env/lib/libtinfo.so.6: no version information available (required by /bin/sh)
 Vector Subtract-1 Test Started
-Vector size: 64 elements
+Vector size: 256 elements
 调用vector_add函数（现在是减1功能）
 All results correct!
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.44 seconds. CPU system time: 0.23 seconds. Elapsed time: 1.65 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.61 seconds. CPU system time: 0.27 seconds. Elapsed time: 1.87 seconds; current allocated memory: 0.000 MB.
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 873.934 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 873.891 MB.
 INFO: [HLS 200-10] Analyzing design file '../code/vector_add.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.04 seconds. CPU system time: 0.28 seconds. Elapsed time: 1.32 seconds; current allocated memory: 876.090 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.27 seconds. CPU system time: 0.37 seconds. Elapsed time: 1.64 seconds; current allocated memory: 876.043 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_13_1'(../code/vector_add.cpp:13:19) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../code/vector_add.cpp:13:19)
 INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'VITIS_LOOP_13_1'(../code/vector_add.cpp:13:19) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../code/vector_add.cpp:13:19)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.43 seconds. CPU system time: 0.23 seconds. Elapsed time: 1.65 seconds; current allocated memory: 876.660 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 876.660 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.61 seconds. CPU system time: 0.31 seconds. Elapsed time: 1.95 seconds; current allocated memory: 876.617 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 876.617 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 878.188 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 878.156 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 880.438 MB.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 904.090 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 905.094 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 880.406 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 904.055 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 904.695 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'vector_add' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -83,25 +83,25 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_13_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_13_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.03 seconds; current allocated memory: 906.113 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.04 seconds; current allocated memory: 906.062 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 906.113 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 906.062 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'vector_add' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 906.340 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 906.324 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 906.340 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 906.324 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'vector_add_Pipeline_VITIS_LOOP_13_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -132,7 +132,7 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LO
 WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem1_AWUSER' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'vector_add_Pipeline_VITIS_LOOP_13_1/m_axi_gmem1_BREADY' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'vector_add_Pipeline_VITIS_LOOP_13_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 906.340 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 906.324 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'vector_add' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -145,15 +145,15 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add/size' to 's_axi
 INFO: [RTGEN 206-500] Setting interface mode on function 'vector_add' to 's_axilite & ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Bundling port 'a', 'c', 'size' and 'return' to AXI-Lite port control.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'vector_add'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 908.340 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 911.777 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 908.312 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 911.773 MB.
 INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 916.836 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 916.805 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for vector_add.
 INFO: [VLOG 209-307] Generating Verilog RTL for vector_add.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2.91 seconds. CPU system time: 0.54 seconds. Elapsed time: 3.45 seconds; current allocated memory: 43.008 MB.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.41 seconds. CPU system time: 0.73 seconds. Elapsed time: 4.16 seconds; current allocated memory: 42.992 MB.
 INFO: [HLS 200-1510] Running: cosim_design -ldflags -L/home/fyt/.conda/envs/opencv_env/lib -Wl,-rpath,/home/fyt/.conda/envs/opencv_env/lib -lopencv_core -lopencv_imgproc -lopencv_imgcodecs 
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
 INFO: [COSIM 212-14] Instrumenting C test bench ...
@@ -165,34 +165,164 @@ INFO: [COSIM 212-14] Instrumenting C test bench ...
    Generating cosim.tv.exe
 INFO: [COSIM 212-302] Starting C TB testing ... 
 Vector Subtract-1 Test Started
-Vector size: 64 elements
+Vector size: 256 elements
 调用vector_add函数（现在是减1功能）
 All results correct!
-ERROR: System received a signal named SIGSEGV and the program has to stop immediately!
-This signal was generated when a program tries to read or write outside the memory that is allocated for it, or to write memory that can only be read.
-Possible cause of this problem may be:
-  1) Missing depth information for one or more pointers to arrays in the interface;
-  2) Insufficient depth setting for array argument(s);
-  3) Excessive depth setting for array argument(s), that exceeds the maximum virtual memory size for the process;
-  4) Null pointer etc.
-Current execution stopped during CodeState = DUMP_OUTPUTS.
-You can search CodeState variable name in apatb*.cpp file under ./sim/wrapc dir to locate the position.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_vector_add_top glbl -Oenable_linking_all_libraries -prj vector_add.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib ieee_proposed=./ieee_proposed -s vector_add 
+Multi-threading is on. Using 30 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/sim/verilog/vector_add_vector_add_Pipeline_VITIS_LOOP_13_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vector_add_vector_add_Pipeline_VITIS_LOOP_13_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/sim/verilog/AESL_axi_master_gmem0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/sim/verilog/vector_add_gmem0_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vector_add_gmem0_m_axi
+INFO: [VRFC 10-311] analyzing module vector_add_gmem0_m_axi_load
+INFO: [VRFC 10-311] analyzing module vector_add_gmem0_m_axi_store
+INFO: [VRFC 10-311] analyzing module vector_add_gmem0_m_axi_read
+INFO: [VRFC 10-311] analyzing module vector_add_gmem0_m_axi_write
+INFO: [VRFC 10-311] analyzing module vector_add_gmem0_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module vector_add_gmem0_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module vector_add_gmem0_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module vector_add_gmem0_m_axi_srl
+INFO: [VRFC 10-311] analyzing module vector_add_gmem0_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/sim/verilog/vector_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vector_add
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/sim/verilog/vector_add.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_vector_add_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/sim/verilog/vector_add_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vector_add_control_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/sim/verilog/AESL_axi_master_gmem1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/sim/verilog/vector_add_gmem1_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vector_add_gmem1_m_axi
+INFO: [VRFC 10-311] analyzing module vector_add_gmem1_m_axi_load
+INFO: [VRFC 10-311] analyzing module vector_add_gmem1_m_axi_store
+INFO: [VRFC 10-311] analyzing module vector_add_gmem1_m_axi_read
+INFO: [VRFC 10-311] analyzing module vector_add_gmem1_m_axi_write
+INFO: [VRFC 10-311] analyzing module vector_add_gmem1_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module vector_add_gmem1_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module vector_add_gmem1_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module vector_add_gmem1_m_axi_srl
+INFO: [VRFC 10-311] analyzing module vector_add_gmem1_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/sim/verilog/vector_add_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vector_add_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.vector_add_flow_control_loop_pip...
+Compiling module xil_defaultlib.vector_add_vector_add_Pipeline_V...
+Compiling module xil_defaultlib.vector_add_control_s_axi
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_mem(MEM_S...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_fifo(MEM_...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_store(NUM...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_mem(MEM_S...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_fifo(MEM_...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_load(NUM_...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_reg_slice...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_reg_slice...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_throttle(...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_reg_slice...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_write(CON...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_reg_slice...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi_read(C_US...
+Compiling module xil_defaultlib.vector_add_gmem0_m_axi(CONSERVAT...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_mem(MEM_S...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_fifo(MEM_...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_store(NUM...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_mem(MEM_S...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_fifo(MEM_...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_load(NUM_...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_reg_slice...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_reg_slice...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_srl(DATA_...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_throttle(...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_reg_slice...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_write(CON...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_reg_slice...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi_read(C_US...
+Compiling module xil_defaultlib.vector_add_gmem1_m_axi(CONSERVAT...
+Compiling module xil_defaultlib.vector_add
+Compiling module xil_defaultlib.AESL_axi_master_gmem0
+Compiling module xil_defaultlib.AESL_axi_master_gmem1
+Compiling module xil_defaultlib.AESL_axi_slave_control
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_vector_add_top
+Compiling module work.glbl
+Built simulation snapshot vector_add
 
-ERROR: [COSIM 212-360] Aborting co-simulation: C TB simulation failed.
-ERROR: [COSIM 212-320] C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim.
-ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
-ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
-INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 4.26 seconds. CPU system time: 0.7 seconds. Elapsed time: 4.95 seconds; current allocated memory: 18.422 MB.
-command 'ap_source' returned error code
-    while executing
-"source run_hls.tcl"
-    invoked from within
-"hls::main run_hls.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$newargs"
-    (procedure "hls_proc" line 16)
-    invoked from within
-"hls_proc [info nameofexecutable] $argv"
-INFO: [HLS 200-112] Total CPU user time: 9.63 seconds. Total CPU system time: 1.65 seconds. Total elapsed time: 21.21 seconds; peak allocated memory: 935.258 MB.
-INFO: [Common 17-206] Exiting vitis_hls at Sun Jun  1 09:33:01 2025...
+****** xsim v2022.2.2 (64-bit)
+  **** SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
+  **** IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+    ** Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/vector_add/xsim_script.tcl
+# xsim {vector_add} -autoloadwcfg -tclbatch {vector_add.tcl}
+Time resolution is 1 ps
+source vector_add.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "125000"
+// RTL Simulation : 1 / 1 [n/a] @ "3895000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 3955 ns : File "/home/fyt/A/teach_bili/course_1/build/vector_add_prj/solution1/sim/verilog/vector_add.autotb.v" Line 581
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Aug 24 03:42:01 2025...
+INFO: [COSIM 212-316] Starting C post checking ...
+Vector Subtract-1 Test Started
+Vector size: 256 elements
+调用vector_add函数（现在是减1功能）
+All results correct!
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 13.81 seconds. CPU system time: 1.58 seconds. Elapsed time: 12.9 seconds; current allocated memory: 18.453 MB.
+INFO: [HLS 200-112] Total CPU user time: 19.97 seconds. Total CPU system time: 2.8 seconds. Total elapsed time: 30.25 seconds; peak allocated memory: 935.258 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sun Aug 24 03:42:01 2025...

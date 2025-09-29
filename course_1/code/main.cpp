@@ -2,7 +2,7 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
-#define SIZE 64
+#define SIZE 256
 
 int main() {
     

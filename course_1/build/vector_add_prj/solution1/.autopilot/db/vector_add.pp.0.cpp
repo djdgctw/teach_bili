@@ -5718,7 +5718,7 @@ __attribute__((sdx_kernel("vector_add", 0))) void vector_add(const ap_uint<32> *
 __attribute__((sdx_kernel("vector_add", 0))) void vector_add(const ap_uint<32> *a,
                 ap_uint<32> *c,
                 int size) {
-#line 51 "/home/fyt/teach_bili/course_1/build/run_hls.tcl"
+#line 51 "/home/fyt/A/teach_bili/course_1/build/run_hls.tcl"
 #pragma HLSDIRECTIVE TOP name=vector_add
 # 5 "../code/vector_add.cpp"
 

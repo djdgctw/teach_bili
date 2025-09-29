@@ -1,0 +1,7 @@
+Running: xsim.dir/vector_add/xsimk -simmode gui -wdb vector_add.wdb -simrunnum 0 -socket 44051
+Design successfully loaded
+Design Loading Memory Usage: 21824 KB (Peak: 21824 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 108628 KB (Peak: 161092 KB)
+Simulation CPU Usage: 0 ms

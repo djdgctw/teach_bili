@@ -1,6 +1,6 @@
 <dict>
   <key>main-file</key>
-  <string>/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp</string>
+  <string>/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/.autopilot/db/sobel_edge.pp.0.cpp</string>
   <key>diagnostics</key>
   <array>
     <dict>
@@ -55,7 +55,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>/home/fyt/teach_bili/course_3/build/run_hls.tcl</string>
+      <string>/home/fyt/A/teach_bili/improve/course_3/build/run_hls.tcl</string>
       <key>line</key>
       <integer>53</integer>
       <key>column</key>

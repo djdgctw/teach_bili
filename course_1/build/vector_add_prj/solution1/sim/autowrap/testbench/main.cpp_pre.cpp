@@ -1,10 +1,10 @@
-# 1 "/home/fyt/teach_bili/course_1/code/main.cpp"
+# 1 "/home/fyt/A/teach_bili/course_1/code/main.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/home/fyt/teach_bili/course_1/code/main.cpp"
-# 1 "/home/fyt/teach_bili/course_1/code/vector_add.h" 1
+# 1 "/home/fyt/A/teach_bili/course_1/code/main.cpp"
+# 1 "/home/fyt/A/teach_bili/course_1/code/vector_add.h" 1
 
 
 
@@ -61599,12 +61599,12 @@ inline bool operator!=(
 }
 # 366 "/opt/Xilinx/Vitis_HLS/2022.2/include/ap_fixed.h" 2
 # 361 "/opt/Xilinx/Vitis_HLS/2022.2/include/ap_int.h" 2
-# 5 "/home/fyt/teach_bili/course_1/code/vector_add.h" 2
+# 5 "/home/fyt/A/teach_bili/course_1/code/vector_add.h" 2
 
 void vector_add(const ap_uint<32> *a,
                 ap_uint<32> *c,
                 int size);
-# 2 "/home/fyt/teach_bili/course_1/code/main.cpp" 2
+# 2 "/home/fyt/A/teach_bili/course_1/code/main.cpp" 2
 
 # 1 "/home/fyt/.conda/envs/opencv_env/include/opencv4/opencv2/opencv.hpp" 1
 # 48 "/home/fyt/.conda/envs/opencv_env/include/opencv4/opencv2/opencv.hpp"
@@ -135508,31 +135508,31 @@ public:
 }
 # 58 "/home/fyt/.conda/envs/opencv_env/include/opencv4/opencv2/video.hpp" 2
 # 90 "/home/fyt/.conda/envs/opencv_env/include/opencv4/opencv2/opencv.hpp" 2
-# 4 "/home/fyt/teach_bili/course_1/code/main.cpp" 2
+# 4 "/home/fyt/A/teach_bili/course_1/code/main.cpp" 2
 
 
 
 int main() {
 
     std::cout << "Vector Subtract-1 Test Started" << std::endl;
-    std::cout << "Vector size: " << 64 << " elements" << std::endl;
+    std::cout << "Vector size: " << 256 << " elements" << std::endl;
 
 
-    ap_uint<32>* a = new ap_uint<32>[64];
-    ap_uint<32>* c = new ap_uint<32>[64];
+    ap_uint<32>* a = new ap_uint<32>[256];
+    ap_uint<32>* c = new ap_uint<32>[256];
 
 
-    for (int i = 0; i < 64; i++) {
+    for (int i = 0; i < 256; i++) {
         a[i] = i + 10;
         c[i] = 0;
     }
 
     std::cout << "调用vector_add函数（现在是减1功能）" << std::endl;
-    vector_add(a, c, 64);
+    vector_add(a, c, 256);
 
 
     int errors = 0;
-    for (int i = 0; i < 64; i++) {
+    for (int i = 0; i < 256; i++) {
         if (c[i] != a[i] - 1) {
             errors++;
             std::cout << "Error at index " << i << ": a=" << a[i] << ", c=" << c[i] << std::endl;

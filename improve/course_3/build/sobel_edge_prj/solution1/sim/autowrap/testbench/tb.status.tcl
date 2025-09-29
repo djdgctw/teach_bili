@@ -1,1 +1,1 @@
-set ::AESL_AUTOSIM::gTopFileName /home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/./sim/autowrap/testbench/sobel_edge.cpp_pre.cpp.tb.cpp
+set ::AESL_AUTOSIM::gTopFileName /home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/./sim/autowrap/testbench/sobel_edge.cpp_pre.cpp.tb.cpp

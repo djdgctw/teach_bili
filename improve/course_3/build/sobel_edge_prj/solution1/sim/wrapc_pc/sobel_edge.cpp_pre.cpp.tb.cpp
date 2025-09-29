@@ -3,13 +3,13 @@
 // Tool Version Limit: 2019.12
 // Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
-# 1 "/home/fyt/teach_bili/course_3/code/sobel_edge.cpp"
+# 1 "/home/fyt/A/teach_bili/improve/course_3/code/sobel_edge.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/home/fyt/teach_bili/course_3/code/sobel_edge.cpp"
-# 1 "/home/fyt/teach_bili/course_3/code/sobel_edge.h" 1
+# 1 "/home/fyt/A/teach_bili/improve/course_3/code/sobel_edge.cpp"
+# 1 "/home/fyt/A/teach_bili/improve/course_3/code/sobel_edge.h" 1
 
 
 
@@ -61811,10 +61811,10 @@ inline bool operator!=(
 }
 # 366 "/opt/Xilinx/Vitis_HLS/2022.2/include/ap_fixed.h" 2
 # 361 "/opt/Xilinx/Vitis_HLS/2022.2/include/ap_int.h" 2
-# 5 "/home/fyt/teach_bili/course_3/code/sobel_edge.h" 2
+# 5 "/home/fyt/A/teach_bili/improve/course_3/code/sobel_edge.h" 2
 
 void sobel_edge(const ap_uint<8> *input, ap_uint<8> *output, int rows, int cols);
-# 2 "/home/fyt/teach_bili/course_3/code/sobel_edge.cpp" 2
+# 2 "/home/fyt/A/teach_bili/improve/course_3/code/sobel_edge.cpp" 2
 
 void sobel_edge(const ap_uint<8> *input, ap_uint<8> *output, int rows, int cols) {
 #pragma HLS INTERFACE m_axi port=input offset=slave bundle=gmem0 depth=4096
@@ -61879,5 +61879,5 @@ apatb_sobel_edge_ir(input, output, rows, cols);
 return ;
 }
 #endif
-# 45 "/home/fyt/teach_bili/course_3/code/sobel_edge.cpp"
+# 45 "/home/fyt/A/teach_bili/improve/course_3/code/sobel_edge.cpp"
 

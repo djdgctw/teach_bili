@@ -277,9 +277,9 @@ set RtlHierarchyInfo {[
 					{"Name" : "gmem1_blk_n_AW", "Type" : "RtlSignal"},
 					{"Name" : "gmem1_blk_n_B", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "5", "SubInstance" : "grp_sobel_edge_Pipeline_VITIS_LOOP_41_6_fu_159", "Port" : "gmem1", "Inst_start_state" : "13", "Inst_end_state" : "14"},
 					{"ID" : "3", "SubInstance" : "grp_sobel_edge_Pipeline_VITIS_LOOP_17_2_fu_143", "Port" : "gmem1", "Inst_start_state" : "4", "Inst_end_state" : "5"},
-					{"ID" : "1", "SubInstance" : "grp_sobel_edge_Pipeline_VITIS_LOOP_37_5_fu_133", "Port" : "gmem1", "Inst_start_state" : "2", "Inst_end_state" : "11"}]},
+					{"ID" : "1", "SubInstance" : "grp_sobel_edge_Pipeline_VITIS_LOOP_37_5_fu_133", "Port" : "gmem1", "Inst_start_state" : "2", "Inst_end_state" : "11"},
+					{"ID" : "5", "SubInstance" : "grp_sobel_edge_Pipeline_VITIS_LOOP_41_6_fu_159", "Port" : "gmem1", "Inst_start_state" : "13", "Inst_end_state" : "14"}]},
 			{"Name" : "input_r", "Type" : "None", "Direction" : "I"},
 			{"Name" : "output_r", "Type" : "None", "Direction" : "I"},
 			{"Name" : "rows", "Type" : "None", "Direction" : "I"},

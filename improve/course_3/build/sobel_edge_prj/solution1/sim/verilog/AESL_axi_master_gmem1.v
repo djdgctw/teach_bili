@@ -501,7 +501,7 @@ initial begin : AW_request_proc
             end
             
             if (FIFO_AW_req_ADDR_tmp/data_byte_size > gmem1_mem_depth) begin
-                $display ("/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/AESL_axi_master_gmem1.v: Write request address %d exceed AXI master gmem1 array depth: %d",FIFO_AW_req_ADDR_tmp/data_byte_size, gmem1_mem_depth); 
+                $display ("/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/AESL_axi_master_gmem1.v: Write request address %d exceed AXI master gmem1 array depth: %d",FIFO_AW_req_ADDR_tmp/data_byte_size, gmem1_mem_depth); 
                 $finish;
             end
             
@@ -688,7 +688,7 @@ initial begin : AR_request_proc
             end
 
             if (FIFO_AR_req_ADDR_tmp/data_byte_size > gmem1_mem_depth) begin
-                $display ("/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/AESL_axi_master_gmem1.v: Read request address %d exceed AXI master gmem1 array depth: %d",FIFO_AR_req_ADDR_tmp/data_byte_size, gmem1_mem_depth); 
+                $display ("/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/AESL_axi_master_gmem1.v: Read request address %d exceed AXI master gmem1 array depth: %d",FIFO_AR_req_ADDR_tmp/data_byte_size, gmem1_mem_depth); 
                 $finish;
             end
 

@@ -1,5 +1,5 @@
 Loaded grayscale image: 48x48 = 2304 pixels
-Output will be saved as: /home/fyt/teach_bili/course_3/images/sobel_edge_output_084126_120.png
+Output will be saved as: /home/fyt/A/teach_bili/improve/course_3/images/sobel_edge_output_020909_735.png
 First 10 edge values:
 Input[0]=255 -> Edge[0]=0
 Input[1]=255 -> Edge[1]=0
@@ -13,30 +13,30 @@ Input[8]=255 -> Edge[8]=0
 Input[9]=255 -> Edge[9]=0
 Sobel edge detection completed!
 Edge pixels (>30): 1384 out of 2304 (60.0694%)
-Edge image saved as: /home/fyt/teach_bili/course_3/images/sobel_edge_output_084126_120.png
+Edge image saved as: /home/fyt/A/teach_bili/improve/course_3/images/sobel_edge_output_020909_735.png
 Vivado Simulator v2022.2.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
 Running: /opt/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_sobel_edge_top glbl -Oenable_linking_all_libraries -prj sobel_edge.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib ieee_proposed=./ieee_proposed -s sobel_edge 
 Multi-threading is on. Using 30 slave threads.
 WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
     LIBRARY_PATH
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/AESL_axi_master_gmem0.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/AESL_axi_master_gmem0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem0
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_sobel_edge_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_37_5.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_37_5.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_37_5
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_mul_32s_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_mul_32s_32s_32_2_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sobel_edge_mul_32s_32s_32_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sobel_edge
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/AESL_axi_master_gmem1.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/AESL_axi_master_gmem1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sobel_edge_flow_control_loop_pipe_sequential_init
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_gmem1_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_gmem1_m_axi.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi
 INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_load
 INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_store
@@ -47,17 +47,17 @@ INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_reg_slice
 INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_fifo
 INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_srl
 INFO: [VRFC 10-311] analyzing module sobel_edge_gmem1_m_axi_mem
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_mul_31ns_32s_63_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_mul_31ns_32s_63_2_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sobel_edge_mul_31ns_32s_63_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_control_s_axi.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sobel_edge_control_s_axi
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_41_6.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_41_6.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_41_6
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_17_2.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_17_2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sobel_edge_sobel_edge_Pipeline_VITIS_LOOP_17_2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_gmem0_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge_gmem0_m_axi.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi
 INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_load
 INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_store
@@ -68,7 +68,7 @@ INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_reg_slice
 INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_fifo
 INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_srl
 INFO: [VRFC 10-311] analyzing module sobel_edge_gmem0_m_axi_mem
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dataflow_monitor
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -176,11 +176,11 @@ source sobel_edge.tcl
 // RTL Simulation : 0 / 1 [n/a] @ "125000"
 // RTL Simulation : 1 / 1 [n/a] @ "320225000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 320285 ns : File "/home/fyt/teach_bili/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge.autotb.v" Line 586
+$finish called at time : 320285 ns : File "/home/fyt/A/teach_bili/improve/course_3/build/sobel_edge_prj/solution1/sim/verilog/sobel_edge.autotb.v" Line 586
 ## quit
-INFO: [Common 17-206] Exiting xsim at Sun Jun  1 08:41:33 2025...
+INFO: [Common 17-206] Exiting xsim at Sat Aug  9 02:09:16 2025...
 Loaded grayscale image: 48x48 = 2304 pixels
-Output will be saved as: /home/fyt/teach_bili/course_3/images/sobel_edge_output_084133_253.png
+Output will be saved as: /home/fyt/A/teach_bili/improve/course_3/images/sobel_edge_output_020916_759.png
 First 10 edge values:
 Input[0]=255 -> Edge[0]=0
 Input[1]=255 -> Edge[1]=0
@@ -194,4 +194,4 @@ Input[8]=255 -> Edge[8]=0
 Input[9]=255 -> Edge[9]=0
 Sobel edge detection completed!
 Edge pixels (>30): 1384 out of 2304 (60.0694%)
-Edge image saved as: /home/fyt/teach_bili/course_3/images/sobel_edge_output_084133_253.png
+Edge image saved as: /home/fyt/A/teach_bili/improve/course_3/images/sobel_edge_output_020916_759.png
