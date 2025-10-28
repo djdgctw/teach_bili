@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Tue Oct 28 07:25:14 2025
+# Process ID: 2679750
+# Current directory: /home/fyt/A/teach_bili/led/build/led_prj/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/fyt/A/teach_bili/led/build/led_prj/solution1/impl/ip/vivado.log
+# Journal file: /home/fyt/A/teach_bili/led/build/led_prj/solution1/impl/ip/vivado.jou
+# Running On: fpgaserver-9950x, OS: Linux, CPU Frequency: 3000.000 MHz, CPU Physical cores: 32, Host memory: 132526 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
