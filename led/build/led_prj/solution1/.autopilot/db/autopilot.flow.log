@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace /home/fyt/A/teach_bili/led/build/led_prj/solution1 opened at Tue Oct 28 07:24:59 UTC 2025
+INFO-FLOW: Workspace /home/fyt/A/teach_bili/led/build/led_prj/solution1 opened at Tue Oct 28 07:47:30 UTC 2025
 Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
 Execute     send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vivado' config_interface -m_axi_latency=0 
@@ -11,7 +11,7 @@ DBG:HLSDevice: Trying to load device library: /opt/Xilinx/Vitis_HLS/2022.2/lib/l
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /opt/Xilinx/Vivado/2022.2/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7s50-csga324-1'
-Command     create_platform done; 1.12 sec.
+Command     create_platform done; 0.92 sec.
 Execute     source /opt/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
 Execute       source /opt/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
 Execute       source /opt/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
@@ -26,7 +26,7 @@ Execute       source /opt/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dd
 Execute       source /opt/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute     ap_part_info -name xc7s50-csga324-1 -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 1.18 sec.
+Command   set_part done; 0.97 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 Execute     ap_set_clock -name default -period 10 -default=false 
@@ -34,7 +34,7 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute   csynth_design 
 INFO: [HLS 200-1510] Running: csynth_design 
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.03 seconds; current allocated memory: 873.707 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.03 seconds; current allocated memory: 873.707 MB.
 INFO: [HLS 200-10] Analyzing design file '../code/led.cpp' ... 
 INFO-FLOW: Compiling one TU...
 INFO-FLOW: Handling ../code/led.cpp as C++
@@ -48,32 +48,32 @@ Execute       source /opt/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/hudd
 Execute       source /opt/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 INFO-FLOW: Source syntax check for synthesis
 Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=spartan7_slow -device-resource-info=BRAM_150.000000_DSP_120.000000_FF_65200.000000_LUT_32600.000000_SLICE_8150.000000_URAM_0.000000 -device-name-info=xc7s50csga324-1 > /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/clang.out.log 2> /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/clang.err.log 
-Command       ap_eval done; 0.16 sec.
+Command       ap_eval done; 0.19 sec.
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /opt/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/.systemc_flag -fix-errors /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.13 sec.
+Command       clang_tidy done; 0.17 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /opt/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/all.directive.json -fix-errors /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.22 sec.
+Command       clang_tidy done; 0.27 sec.
 Execute       clang_tidy xilinx-remove-assert -desc remove-assert /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: exec /opt/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.16 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.4 seconds per iteration
+Command       clang_tidy done; 0.18 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.5 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp std=gnu++14 -target fpga  
 Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp.clang-tidy.loop-label.err.log 
-Command         ap_eval done; 0.35 sec.
+Command         ap_eval done; 0.33 sec.
 Execute         source /opt/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command       clang_tidy done; 0.37 sec.
+Command       clang_tidy done; 0.34 sec.
 Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
-Command       ap_eval done; 0.17 sec.
+Command       ap_eval done; 0.16 sec.
 Execute       ap_part_info -name xc7s50-csga324-1 -data info 
 INFO-FLOW: compiling source code to llvm bc
 Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /opt/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.bc -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=spartan7_slow -device-resource-info=BRAM_150.000000_DSP_120.000000_FF_65200.000000_LUT_32600.000000_SLICE_8150.000000_URAM_0.000000 -device-name-info=xc7s50csga324-1 > /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp.clang.out.log 2> /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.pp.0.cpp.clang.err.log 
-Command       ap_eval done; 0.22 sec.
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.21 seconds. CPU system time: 0.34 seconds. Elapsed time: 1.55 seconds; current allocated memory: 875.242 MB.
+Command       ap_eval done; 0.2 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.26 seconds. CPU system time: 0.37 seconds. Elapsed time: 1.64 seconds; current allocated memory: 875.242 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute       run_link_or_opt -out /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.g.bc"  
@@ -85,14 +85,14 @@ INFO-FLOW:
 INFO-FLOW: Linking math bc lib
 Execute       run_link_or_opt -out /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /opt/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc 
 Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /opt/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
-Command         ap_eval done; 1.4 sec.
+Command         ap_eval done; 1.26 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 1.4 sec.
+Command       run_link_or_opt done; 1.26 sec.
 Execute       run_link_or_opt -opt -out /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=led -reflow-float-conversion 
 Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=led -reflow-float-conversion -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
-Command         ap_eval done; 0.45 sec.
+Command         ap_eval done; 0.47 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.45 sec.
+Command       run_link_or_opt done; 0.47 sec.
 Execute       run_link_or_opt -out /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc 
 Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
 INFO-FLOW: 
@@ -105,32 +105,32 @@ Execute       is_m_axi_addr64
 INFO-FLOW: Doing LTO.
 Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=led -mllvm -hls-db-dir -mllvm /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-assume-no-address-wrap=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=spartan7_slow -device-resource-info=BRAM_150.000000_DSP_120.000000_FF_65200.000000_LUT_32600.000000_SLICE_8150.000000_URAM_0.000000 -device-name-info=xc7s50csga324-1 > /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.67 seconds. CPU system time: 0.29 seconds. Elapsed time: 2.07 seconds; current allocated memory: 875.555 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.67 seconds. CPU system time: 0.32 seconds. Elapsed time: 1.98 seconds; current allocated memory: 875.555 MB.
 INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 875.555 MB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top led -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.0.bc -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 878.688 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 878.684 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.1.bc -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 883.406 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 883.406 MB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.g.1.bc to /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.o.1.bc -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 908.438 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 908.559 MB.
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.o.2.bc -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 909.223 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 909.215 MB.
 INFO-FLOW: Finish building internal data model.
-Command     elaborate done; 3.69 sec.
+Command     elaborate done; 3.68 sec.
 Execute     ap_eval exec zip -j /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
@@ -158,7 +158,7 @@ Execute       set_default_model led
 Execute       schedule -model led 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.03 seconds; current allocated memory: 909.223 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.04 seconds; current allocated memory: 909.215 MB.
 Execute       syn_report -verbosereport -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.sched.adb -f 
@@ -170,7 +170,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 909.223 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 909.215 MB.
 Execute       syn_report -verbosereport -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute       db_write -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.bind.adb -f 
@@ -188,7 +188,7 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'led/led_r' to 'ap_none'.
 WARNING: [RTGEN 206-101] Port 'led_r' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
 INFO: [RTGEN 206-500] Setting interface mode on function 'led' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'led'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 909.223 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 909.215 MB.
 Execute       source /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.rtl_wrap.cfg.tcl 
 Execute       gen_rtl led -istop -style xilinx -f -lang vhdl -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/syn/vhdl/led 
 Execute       gen_rtl led -istop -style xilinx -f -lang vlog -o /home/fyt/A/teach_bili/led/build/led_prj/solution1/syn/verilog/led 
@@ -252,7 +252,7 @@ Execute       ap_part_info -name xc7s50-csga324-1 -data info -quiet
 Execute       source /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/fyt/A/teach_bili/led/build/led_prj/solution1/.autopilot/db/led.compgen.tcl 
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 909.223 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 909.215 MB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='led_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
@@ -284,14 +284,14 @@ INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 909.223 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 909.215 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for led.
 INFO: [VLOG 209-307] Generating Verilog RTL for led.
 Execute       syn_report -model led -printsummary 
 INFO: [HLS 200-789] **** Estimated Fmax: 0.00 MHz
-Command     autosyn done; 0.11 sec.
-Command   csynth_design done; 3.82 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.05 seconds. CPU system time: 0.66 seconds. Elapsed time: 3.82 seconds; current allocated memory: 35.516 MB.
+Command     autosyn done; 0.12 sec.
+Command   csynth_design done; 3.84 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.11 seconds. CPU system time: 0.73 seconds. Elapsed time: 3.84 seconds; current allocated memory: 35.508 MB.
 Execute   export_design -format ip_catalog -output /home/fyt/A/teach_bili/led/ip/led 
 INFO: [HLS 200-1510] Running: export_design -format ip_catalog -output /home/fyt/A/teach_bili/led/ip/led 
 Execute     config_export -format=ip_catalog -output=/home/fyt/A/teach_bili/led/ip/led 
@@ -413,6 +413,6 @@ INFO-FLOW: DBG:PUTS:     IP package: exec /home/fyt/A/teach_bili/led/build/led_p
 INFO-FLOW: DBG:PUTS:     IP package: success /home/fyt/A/teach_bili/led/build/led_prj/solution1/impl/ip/pack.sh
 Execute     send_msg_by_id INFO @200-802@%s /home/fyt/A/teach_bili/led/ip/led/export.zip 
 INFO: [HLS 200-802] Generated output file /home/fyt/A/teach_bili/led/ip/led/export.zip
-Command   export_design done; 15.78 sec.
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 5.84 seconds. CPU system time: 0.56 seconds. Elapsed time: 15.78 seconds; current allocated memory: 1.664 MB.
+Command   export_design done; 16.19 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 6.21 seconds. CPU system time: 0.48 seconds. Elapsed time: 16.19 seconds; current allocated memory: 2.051 MB.
 Execute   cleanup_all 

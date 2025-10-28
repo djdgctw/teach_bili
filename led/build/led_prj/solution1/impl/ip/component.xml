@@ -303,8 +303,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Led</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114323045</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-10-28T07:25:19Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114323067</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-28T07:47:51Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
